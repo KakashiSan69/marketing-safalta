@@ -85,34 +85,31 @@
     </div>
 </footer>
 
-<!-- ===== STICKY BOTTOM BAR ===== -->
-<div class="ms-sticky-bar" id="ms-sticky-bar">
-    <div class="ms-sticky-inner">
-        <div class="ms-sticky-left">
+<!-- ===== STICKY BOTTOM BAR ON SCROLL (Exact match from raj-web-4) ===== -->
+<div class="sticky-bar ms-sticky-bar" id="sticky-bar">
+    <div class="container sticky-bar-inner ms-sticky-inner">
+        <div class="sticky-bar-text ms-sticky-left">
             <span class="ms-sticky-sub">Ready to grow your business???</span>
-            <span class="ms-sticky-main">Connect with us now</span>
+            <strong class="ms-sticky-main">Connect with us now</strong>
         </div>
-        <a href="tel:+916388910079" class="ms-sticky-btn">
-            Book A Free Strategy Call →
+        <a href="tel:+916388910079" class="cta-primary sticky-btn ms-sticky-btn">
+            <span>Book A Free Strategy Call →</span>
         </a>
     </div>
 </div>
 
 <script>
-    // Hide sticky bar near footer
-    (function() {
-        var stickyBar = document.getElementById('ms-sticky-bar');
-        if (!stickyBar) return;
-        window.addEventListener('scroll', function() {
-            var scrollY = window.scrollY || window.pageYOffset;
-            var winH = window.innerHeight;
-            var docH = document.documentElement.scrollHeight;
-            if (scrollY + winH >= docH - 120) {
-                stickyBar.style.display = 'none';
+    // Sticky Bottom Bar on Scroll (Exact raj-web-4 behavior)
+    (function () {
+        var bar = document.getElementById('sticky-bar') || document.getElementById('ms-sticky-bar');
+        if (!bar) return;
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 450) {
+                bar.classList.add('visible');
             } else {
-                stickyBar.style.display = 'block';
+                bar.classList.remove('visible');
             }
-        });
+        }, { passive: true });
     })();
 </script>
 
