@@ -98,6 +98,33 @@ get_header(); ?>
     </div>
 </section>
 
+<!-- ===== CERTIFIED PARTNERS SECTION ===== -->
+<section class="ms-partners-section">
+    <div class="ms-partners-container">
+        <div class="ms-partners-grid">
+            <!-- Meta Certified Partner Card -->
+            <div class="ms-partner-card">
+                <div class="ms-partner-logo-wrap">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/meta-partner.png" alt="Meta Certified Partner" loading="lazy">
+                </div>
+                <h3>Meta Certified Partner</h3>
+                <hr class="ms-partner-divider">
+                <p class="ms-partner-desc">Trusted Partner for Meta (Facebook &amp; Instagram)</p>
+            </div>
+
+            <!-- Certified Google Partner Card -->
+            <div class="ms-partner-card">
+                <div class="ms-partner-logo-wrap">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/google-ads-partner.png" alt="Google Ads Certified Partner" loading="lazy">
+                </div>
+                <h3>Certified Google Partner</h3>
+                <hr class="ms-partner-divider">
+                <p class="ms-partner-desc">Certified Google Ads Specialist for Healthcare Campaigns.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== MEDIA / NEWS BAR ===== -->
 <div class="ms-media-bar">
     <div class="ms-media-bar-inner">

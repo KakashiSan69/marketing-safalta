@@ -661,6 +661,91 @@ a {
 }
 
 /* =====================================================
+   CERTIFIED PARTNERS SECTION
+   ===================================================== */
+.ms-partners-section {
+  background: #090514;
+  padding: 50px 0 60px;
+  position: relative;
+}
+
+.ms-partners-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ms-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .ms-partners-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.ms-partner-card {
+  background: #0a0618;
+  border: 1.5px solid #00d2ff;
+  border-radius: 20px;
+  padding: 40px 32px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.2), inset 0 0 16px rgba(0, 210, 255, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ms-partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 32px rgba(0, 210, 255, 0.4), inset 0 0 20px rgba(0, 210, 255, 0.08);
+}
+
+.ms-partner-logo-wrap {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.ms-partner-logo-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ms-partner-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 22px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.ms-partner-divider {
+  width: 100%;
+  border: none;
+  border-top: 1.5px dotted rgba(0, 210, 255, 0.5);
+  margin: 0 0 20px 0;
+}
+
+.ms-partner-desc {
+  font-size: 15px;
+  color: #e2e8f0;
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* =====================================================
    MEDIA / CLIENT LOGOS MARQUEE
    ===================================================== */
 .ms-media-bar {
