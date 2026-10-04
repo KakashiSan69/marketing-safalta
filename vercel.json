@@ -1,13 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.4"
-    },
-    "*.php": {
-      "runtime": "vercel-php@0.7.4"
-    },
-    "wp-admin/*.php": {
+    "index.php": {
       "runtime": "vercel-php@0.7.4"
     }
   },
@@ -25,12 +19,8 @@
       "dest": "/wp-includes/$1"
     },
     {
-      "src": "^/wp-admin/(.*\\.php)$",
+      "src": "^/wp-admin/(.*)",
       "dest": "/wp-admin/$1"
-    },
-    {
-      "src": "^/(.*\\.php)$",
-      "dest": "/$1"
     },
     {
       "src": "/(.*)",
