@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.4"
+    },
+    "*.php": {
+      "runtime": "vercel-php@0.7.4"
+    },
+    "wp-admin/*.php": {
+      "runtime": "vercel-php@0.7.4"
+    }
+  },
+  "routes": [
+    {
+      "src": "^/wp-content/themes/marketing-safalta-by-saurabh-singh/assets/(.*)",
+      "dest": "/wp-content/themes/marketing-safalta-by-saurabh-singh/assets/$1"
+    },
+    {
+      "src": "^/wp-content/uploads/(.*)",
+      "dest": "/wp-content/uploads/$1"
+    },
+    {
+      "src": "^/wp-includes/(.*)",
+      "dest": "/wp-includes/$1"
+    },
+    {
+      "src": "^/wp-admin/(.*\\.php)$",
+      "dest": "/wp-admin/$1"
+    },
+    {
+      "src": "^/(.*\\.php)$",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.php"
+    }
+  ]
+}
