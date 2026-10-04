@@ -1913,30 +1913,32 @@ a {
 }
 
 .proof-badge-chip {
-  background: rgba(0, 210, 196, 0.16);
-  border: 1px solid rgba(0, 210, 196, 0.45);
-  color: #00d2c4;
+  background: rgba(254, 240, 138, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  color: #fef08a;
   font-size: 12px;
   font-weight: 700;
   padding: 3px 10px;
   border-radius: 6px;
   letter-spacing: 0.05em;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.15);
 }
 
 .proof-action-text {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #cbd5e1;
-  transition: color 0.2s ease;
+  color: #fef08a;
+  transition: all 0.2s ease;
 }
 
 .proof-item-card:hover .proof-action-text span {
-  color: #00d2c4;
+  color: #fef08a;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
 }
 
 .proof-action-text svg {
-  color: #00d2c4;
+  color: #facc15;
   flex-shrink: 0;
 }
 

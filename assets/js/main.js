@@ -237,5 +237,56 @@
     } else {
         runCounterAnimation();
     }
+
+    /* ===== YOUTUBE SHORTS MODAL PLAYER (NO REDIRECT) ===== */
+    document.addEventListener('DOMContentLoaded', function() {
+        var ytCards = document.querySelectorAll('.ms-yt-short-card');
+        var modal = document.getElementById('msYtModal');
+        var iframe = document.getElementById('msYtIframe');
+        var closeBtn = document.getElementById('msYtModalClose');
+
+        if (!modal || !iframe) return;
+
+        function openYtModal(videoId) {
+            // Embed URL with autoplay and responsive player
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeYtModal() {
+            modal.classList.remove('open');
+            iframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        ytCards.forEach(function(card) {
+            card.addEventListener('click', function() {
+                var vid = this.getAttribute('data-video-id');
+                if (vid) {
+                    openYtModal(vid);
+                }
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeYtModal();
+            });
+        }
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeYtModal();
+            }
+        });
+
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeYtModal();
+            }
+        });
+    });
 })();
 

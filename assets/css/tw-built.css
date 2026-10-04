@@ -143,30 +143,32 @@
 }
 
 .proof-badge-chip {
-  background: rgba(0, 210, 196, 0.16);
-  border: 1px solid rgba(0, 210, 196, 0.45);
-  color: #00d2c4;
+  background: rgba(254, 240, 138, 0.12);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  color: #fef08a;
   font-size: 12px;
   font-weight: 700;
   padding: 3px 10px;
   border-radius: 6px;
   letter-spacing: 0.05em;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.15);
 }
 
 .proof-action-text {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #cbd5e1;
-  transition: color 0.2s ease;
+  color: #fef08a;
+  transition: all 0.2s ease;
 }
 
 .proof-item-card:hover .proof-action-text span {
-  color: #00d2c4;
+  color: #fef08a;
+  text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
 }
 
 .proof-action-text svg {
-  color: #00d2c4;
+  color: #facc15;
   flex-shrink: 0;
 }
 
@@ -345,5 +347,202 @@
 .ms-slide-menu-logo img {
 }
 .ms-footer-brand img {
+}
+
+/* ===== LATEST YOUTUBE POSTS / SHORTS CAROUSEL/GRID ===== */
+.ms-yt-shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .ms-yt-shorts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ms-yt-shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ms-yt-shorts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ms-yt-short-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0d071d;
+  border: 1.5px solid rgba(168, 85, 247, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 9 / 16;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ms-yt-short-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #ff0000;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+.ms-yt-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ms-yt-short-card:hover .ms-yt-thumb {
+  transform: scale(1.06);
+}
+
+.ms-yt-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 40%, rgba(10,5,24,0.92) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.ms-yt-tag {
+  align-self: flex-start;
+  background: rgba(255, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.ms-yt-play-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.95);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ms-yt-short-card:hover .ms-yt-play-btn {
+  transform: scale(1.15);
+  background: #ff1a1a;
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.9);
+}
+
+.ms-yt-short-info {
+  margin-top: auto;
+}
+
+.ms-yt-short-title {
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ms-yt-tap-cue {
+  font-size: 11px;
+  color: #c084fc;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Modal for inline video player */
+.ms-yt-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 2, 14, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ms-yt-modal.open {
+  display: flex;
+  opacity: 1;
+}
+
+.ms-yt-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 82vh;
+  max-height: 750px;
+  background: #000000;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 40px rgba(168, 85, 247, 0.35);
+  border: 1.5px solid rgba(168, 85, 247, 0.4);
+}
+
+.ms-yt-modal-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 22px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ms-yt-modal-close:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  transform: rotate(90deg);
+}
+
+.ms-yt-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
