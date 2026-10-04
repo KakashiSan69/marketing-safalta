@@ -2266,5 +2266,72 @@ a {
   margin-bottom: 0 !important;
 }
 
+@media (max-width: 640px) {
+  .ms-section .ms-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* =====================================================
+   HILNE WALA ANIMATED BUTTON (Wiggle & Pulse Glow)
+   ===================================================== */
+@keyframes msBtnShake {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  15% {
+    transform: scale(1.04) rotate(-2deg);
+  }
+  30% {
+    transform: scale(1.04) rotate(2deg);
+  }
+  45% {
+    transform: scale(1.03) rotate(-1.5deg);
+  }
+  60% {
+    transform: scale(1.02) rotate(1deg);
+  }
+  75% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.ms-btn-red {
+  animation: msBtnShake 3s ease-in-out infinite !important;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.ms-btn-red::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(25deg);
+  pointer-events: none;
+  animation: msBtnShine 3s infinite;
+}
+
+@keyframes msBtnShine {
+  0%, 70% {
+    left: -60%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+.ms-btn-red:hover {
+  animation-play-state: paused !important;
+  transform: scale(1.06) translateY(-2px) !important;
+  box-shadow: 0 0 35px rgba(227, 28, 37, 0.75), 0 0 20px rgba(168, 85, 247, 0.6) !important;
+}
+
+
 
 
