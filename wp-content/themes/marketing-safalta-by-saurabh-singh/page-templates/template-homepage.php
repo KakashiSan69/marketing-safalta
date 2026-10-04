@@ -10,9 +10,9 @@ get_header(); ?>
     <div class="ms-hero-inner">
         <!-- Left Content -->
         <div class="ms-hero-left">
-            <div class="ms-eyebrow">India's Trusted Digital Marketing Expert</div>
-            <h1>Ready to Grow<br>Your Business<br><span class="highlight">Online?</span></h1>
-            <p class="ms-hero-desc">Take your business to the next level with data-driven <strong>Google Ads, SEO, Meta Ads</strong> and <strong>Website Development</strong> that delivers real ROI.</p>
+            <div class="ms-eyebrow">• GOOGLE ADS • SEO • PERFORMANCE MARKETING</div>
+            <h1>Get More Leads,<br>Sales & Customers<br><span class="highlight">With Digital Marketing</span></h1>
+            <p class="ms-hero-desc">We Help Businesses Grow Online With <strong>SEO, Google Ads, Meta Ads</strong>, <strong>Social Media Marketing</strong> & <strong>High-Converting Websites</strong>.</p>
 
             <div class="ms-service-chips">
                 <span class="ms-chip red">Google Ads</span>
@@ -132,7 +132,7 @@ get_header(); ?>
 
 
 <!-- ===== ABOUT / EXPERT SECTION ===== -->
-<section class="ms-section" id="about" style="background: #F9F9F9;">
+<section class="ms-section" id="about" style="background: var(--ms-surface);">
     <div class="ms-container">
         <div class="ms-expert-grid">
             <div class="ms-expert-img">
@@ -143,7 +143,7 @@ get_header(); ?>
                 <h2><span>Marketing Safalta</span> — Delivering Real Leads, Real Growth, Real ROI</h2>
                 <p><strong>Marketing Safalta</strong> is a <strong>Google Ads Certified Expert</strong> and one of India's most trusted performance marketers. With <strong>12+ years of hands-on experience</strong>, he's managed ₹100Cr+ in ad spend and built campaigns that don't just run — they <em>win</em>.</p>
                 <p>From high-intent <strong>Search Ads</strong> to AI-powered <strong>Performance Max Campaigns</strong>, every strategy is built to <strong>maximize your ROI</strong> and bring in the leads your business deserves.</p>
-                <p style="font-size:18px; font-weight:700; color:#E31C25;">Marketing Safalta = Real Results. Real ROI.</p>
+                <p style="font-size:18px; font-weight:700; color: var(--ms-lime);">Marketing Safalta = Real Results. Real ROI.</p>
                 <div style="margin-top:24px;">
                     <a href="tel:+916388910079" class="ms-btn-red">Get Free Strategy Call</a>
                 </div>
@@ -153,7 +153,7 @@ get_header(); ?>
 </section>
 
 <!-- ===== YOUTUBE MARQUEE SECTION ===== -->
-<section class="ms-section" style="padding: 60px 0 40px; overflow: hidden; background: #fff;">
+<section class="ms-section" style="padding: 60px 0 40px; overflow: hidden; background: var(--ms-base);">
     <div class="ms-container" style="text-align: center; margin-bottom: 48px;">
         <h2 class="ms-section-title">Trusted By 2,000+ Businesses And Followed By 1M+ Digital Aspirants</h2>
     </div>
@@ -206,7 +206,7 @@ get_header(); ?>
     </div>
 </section>
 <!-- ===== WHY CHOOSE SECTION ===== -->
-<section class="ms-section" id="why-choose-us" style="background-color: var(--ms-light);">
+<section class="ms-section" id="why-choose-us" style="background-color: var(--ms-surface);">
     <div class="ms-container" style="text-align: center;">
         <div class="ms-section-tag">Why Choose Us</div>
         <h2 class="ms-section-title">Why Choose Us <span class="red">Marketing Safalta</span></h2>
@@ -254,7 +254,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div style="margin-top: 40px; max-width: 1000px; width: 92%; margin-left: auto; margin-right: auto; background: #fff; border-left: 4px solid var(--ms-red); padding: 24px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+    <div style="margin-top: 40px; max-width: 1000px; width: 92%; margin-left: auto; margin-right: auto; background: var(--ms-card-bg); border-left: 4px solid var(--ms-purple); border: 1px solid var(--ms-border); padding: 24px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
         <p style="margin: 0; font-weight: 600; color: var(--ms-ink); font-size: 18px; line-height: 1.6; text-align: center;">Choosing Marketing Safalta means partnering with a team that genuinely cares about your growth. We combine expert knowledge with a client-first approach, ensuring you receive professional, results-driven service. Let us help you unlock your business's full online potential.</p>
     </div>
     </div>
@@ -426,7 +426,7 @@ get_header(); ?>
 </section>
 
 <!-- ===== FAQ SECTION ===== -->
-<section class="ms-section" style="background: #fff;" id="faq">
+<section class="ms-section" style="background: var(--ms-base);" id="faq">
     <div class="ms-container">
         <div style="text-align:center; margin-bottom: 48px;">
             <div class="ms-section-tag">FAQ</div>
@@ -480,7 +480,7 @@ get_header(); ?>
 </section>
 
 <!-- ===== RECENT BLOGS SECTION ===== -->
-<section class="ms-section" style="background: var(--ms-light);" id="blog">
+<section class="ms-section" style="background: var(--ms-surface);" id="blog">
     <div class="ms-container">
         <div style="text-align:center; margin-bottom: 48px;">
             <div class="ms-section-tag">Our Blog</div>
