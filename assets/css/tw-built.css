@@ -696,5 +696,13 @@
   margin-bottom: 0 !important;
 }
 
+@media (max-width: 640px) {
+  .ms-section .ms-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+
 
 
