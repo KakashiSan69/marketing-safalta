@@ -91,7 +91,7 @@ get_header();
     <div class="ms-container">
         <div class="ms-cta-grid">
             <div class="ms-cta-left">
-                <h2>Stop Losing Money on Ads.<br>Start Growing Your Business Today.</h2>
+                <h2>Get More Customers for Your Business<br>with SEO, Google Ads &amp; Meta Ads</h2>
                 <p>Book your FREE 30-minute strategy session with India's #1 Google Ads Expert.<br>Zero commitment. 100% value. Real strategies for your business.</p>
                 <div class="ms-cta-btns">
                     <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="ms-btn-white">Book Free Strategy Call</a>
