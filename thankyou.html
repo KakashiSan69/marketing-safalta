@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Meeting Confirmed | Marketing Safalta</title>
+  <title>Meeting Confirmed! 🎉 | Marketing Safalta</title>
   <meta name="description"
-    content="Thank you. Your meeting is confirmed with Marketing Safalta. We look forward to speaking with you.">
+    content="Thank you! Your Strategy Call is confirmed with Marketing Safalta. We look forward to scaling your business.">
   <link rel="icon" type="image/webp" href="/assets/logo.webp">
 
   <!-- Meta Pixel Code -->
@@ -27,765 +27,974 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Preconnect to critical origins -->
+  <!-- Fonts & Icons matching the Website -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts: DM Sans & Space Grotesk -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..1000;1,9..40,400..1000&family=Space+Grotesk:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?ver=6.5.0">
+  
+  <!-- Website Built CSS -->
+  <link rel="stylesheet" href="/assets/css/tw-built.css?ver=1791124900">
 
   <style>
-    /* ----------------------------------------------------
-       RESET & ROOT VARIABLES
-       ---------------------------------------------------- */
-    *, *::before, *::after {
+    /* ====================================================
+       MARKETING SAFALTA — MINIMAL, TEXT-LIGHT THANK YOU PAGE
+       Theme: Exact Website Dark Violet / Obsidian / Red Accent
+       ==================================================== */
+    :root {
+      --ms-bg: #070311;
+      --ms-bg-card: rgba(16, 9, 28, 0.88);
+      --ms-bg-card-border: rgba(139, 92, 246, 0.28);
+      --ms-purple: #8b5cf6;
+      --ms-purple-glow: rgba(139, 92, 246, 0.45);
+      --ms-red: #e31c25;
+      --ms-red-glow: rgba(227, 28, 37, 0.4);
+      --ms-emerald: #10b981;
+      --ms-emerald-glow: rgba(16, 185, 129, 0.45);
+      --ms-gold: #f59e0b;
+      --ms-text: #ffffff;
+      --ms-text-muted: #b4a9cc;
+    }
+
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    :root {
-      --bg: #090510;
-      --bg-gradient: radial-gradient(circle at 50% 30%, #20133a 0%, #0d0817 50%, #090510 100%);
-      --surface: #140d22;
-      --surface-border: rgba(168, 122, 255, 0.28);
-      --violet: #8b5cf6;
-      --violet-light: #a78bfa;
-      --violet-glow: rgba(139, 92, 246, 0.4);
-      --green: #22c55e;
-      --green-glow: rgba(34, 197, 94, 0.35);
-      --text: #f5f3ff;
-      --text-muted: #a79fc0;
-      --text-sub: #c4b5fd;
-    }
-
-    html {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      min-height: 100%;
-    }
-
     body {
+      background-color: var(--ms-bg);
+      color: var(--ms-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       min-height: 100vh;
-      min-height: 100dvh;
-      background: var(--bg-gradient);
-      color: var(--text);
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
       position: relative;
-      overflow-x: hidden;
     }
 
-    /* Ambient Background Glow Orbs */
-    .ambient-glow {
+    /* Ambient Background Glow Mesh */
+    .ms-bg-mesh {
       position: fixed;
-      border-radius: 50%;
-      filter: blur(80px);
+      inset: 0;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.55;
+      overflow: hidden;
     }
 
-    .ambient-glow-1 {
-      top: 15%;
+    .ms-mesh-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.45;
+      animation: msFloatOrb 12s ease-in-out infinite alternate;
+    }
+
+    .ms-mesh-orb-1 {
+      width: 550px;
+      height: 550px;
+      top: -100px;
       left: 50%;
       transform: translateX(-50%);
-      width: clamp(280px, 45vw, 600px);
-      height: clamp(280px, 45vw, 600px);
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.28) 0%, rgba(93, 39, 180, 0.08) 60%, transparent 80%);
-      animation: floatPulse 7s ease-in-out infinite alternate;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, rgba(227, 28, 37, 0.15) 50%, transparent 75%);
     }
 
-    .ambient-glow-2 {
-      bottom: 5%;
-      right: 10%;
-      width: clamp(220px, 30vw, 420px);
-      height: clamp(220px, 30vw, 420px);
-      background: radial-gradient(circle, rgba(34, 197, 94, 0.12) 0%, transparent 70%);
-      animation: floatPulse 9s ease-in-out infinite alternate-reverse;
+    .ms-mesh-orb-2 {
+      width: 420px;
+      height: 420px;
+      bottom: 10%;
+      left: -50px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+      animation-duration: 15s;
     }
 
-    @keyframes floatPulse {
-      0% {
-        transform: translate(-50%, 0) scale(0.95);
-        opacity: 0.45;
-      }
-      100% {
-        transform: translate(-50%, 15px) scale(1.08);
-        opacity: 0.7;
-      }
+    .ms-mesh-orb-3 {
+      width: 450px;
+      height: 450px;
+      top: 35%;
+      right: -80px;
+      background: radial-gradient(circle, rgba(227, 28, 37, 0.25) 0%, transparent 70%);
+      animation-duration: 14s;
     }
 
-    /* ----------------------------------------------------
-       SITE HEADER
-       ---------------------------------------------------- */
-    .header {
-      position: relative;
-      z-index: 10;
+    @keyframes msFloatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(25px, -30px) scale(1.08); }
+      100% { transform: translate(-20px, 20px) scale(0.95); }
+    }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
       width: 100%;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      background: rgba(9, 5, 16, 0.75);
+      height: 100%;
+      pointer-events: none;
+      z-index: 99999;
     }
 
-    .header-inner {
-      width: 100%;
+    /* Minimal Header */
+    .ms-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(9, 4, 18, 0.85);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .ms-nav-container {
       max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .brand {
+    .ms-brand img {
+      height: 42px;
+      width: auto;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .ms-brand:hover img {
+      transform: scale(1.03);
+    }
+
+    .ms-nav-status {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .brand:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    .brand img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      font-family: 'Space Grotesk', sans-serif;
-      line-height: 1.1;
-    }
-
-    .brand-title {
-      font-size: 16px;
+      gap: 8px;
+      font-size: 13px;
       font-weight: 700;
-      color: #ffffff;
-      letter-spacing: -0.02em;
+      color: #a7f3d0;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 6px 14px;
+      border-radius: 50px;
     }
 
-    .brand-subtitle {
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--violet-light);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    .header-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 600;
-      color: #86efac;
-      background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      padding: 6px 12px;
-      border-radius: 20px;
-      letter-spacing: 0.02em;
-    }
-
-    .header-badge-dot {
-      width: 6px;
-      height: 6px;
+    .ms-status-dot {
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 8px #22c55e;
-      animation: pulseGreenDot 2s infinite;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: msPulseDot 1.6s infinite;
     }
 
-    @keyframes pulseGreenDot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
+    @keyframes msPulseDot {
+      0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.8); }
+      70% { transform: scale(1.15); box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
-    /* ----------------------------------------------------
-       MAIN CONTENT CONTAINER
-       ---------------------------------------------------- */
-    .page-main {
+    /* Main Thank You Container */
+    .ty-main-wrap {
       flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: clamp(24px, 4.5vw, 60px) 16px;
       position: relative;
       z-index: 1;
-      width: 100%;
-      box-sizing: border-box;
+      padding: 40px 20px 60px;
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    /* Confirmation Card */
-    .confirmation-card {
-      width: 100%;
-      max-width: 620px;
-      background: linear-gradient(155deg, rgba(22, 15, 36, 0.94) 0%, rgba(13, 8, 22, 0.98) 100%);
-      border: 1px solid var(--surface-border);
-      border-radius: 24px;
+    /* Hero Centerpiece Card */
+    .ty-card {
+      position: relative;
+      background: var(--ms-bg-card);
+      border: 1px solid var(--ms-bg-card-border);
+      border-radius: 28px;
+      padding: clamp(32px, 5vw, 48px) clamp(20px, 4vw, 44px);
       box-shadow: 
-        0 25px 65px rgba(0, 0, 0, 0.75),
-        0 0 45px rgba(139, 92, 246, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      padding: clamp(28px, 6vw, 52px) clamp(20px, 5vw, 44px);
+        0 20px 60px rgba(0, 0, 0, 0.7),
+        0 0 45px rgba(139, 92, 246, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       text-align: center;
-      position: relative;
-      overflow: visible;
-      box-sizing: border-box;
-      animation: cardEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+      overflow: hidden;
+      animation: tyCardEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
     }
 
-    @keyframes cardEntrance {
-      0% {
-        opacity: 0;
-        transform: translateY(32px) scale(0.96);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    /* Card Top Glow Border Accent */
-    .card-top-shine {
+    /* Glowing Scanning Light Beam on Card Top */
+    .ty-card::before {
+      content: '';
       position: absolute;
-      top: -1px;
-      left: 15%;
-      right: 15%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #a78bfa, #22c55e, #a78bfa, transparent);
-      border-radius: 2px;
-      opacity: 0.8;
-    }
-
-    /* ----------------------------------------------------
-       ANIMATED SUCCESS ICON / BADGE
-       ---------------------------------------------------- */
-    .success-icon-wrapper {
-      position: relative;
-      width: clamp(76px, 16vw, 96px);
-      height: clamp(76px, 16vw, 96px);
-      margin: 0 auto clamp(20px, 4vw, 30px) auto;
-      display: grid;
-      place-items: center;
-    }
-
-    /* Outer Pulse Ripple */
-    .pulse-ring {
-      position: absolute;
-      inset: -10px;
-      border-radius: 50%;
-      border: 2px solid rgba(34, 197, 94, 0.4);
-      animation: ripple 2.6s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
-      pointer-events: none;
-    }
-
-    .pulse-ring-2 {
-      position: absolute;
-      inset: -18px;
-      border-radius: 50%;
-      border: 1px dashed rgba(168, 122, 255, 0.35);
-      animation: ripple 2.6s cubic-bezier(0.25, 0.8, 0.25, 1) infinite 0.7s;
-      pointer-events: none;
-    }
-
-    @keyframes ripple {
-      0% {
-        transform: scale(0.85);
-        opacity: 0.8;
-      }
-      50% {
-        transform: scale(1.15);
-        opacity: 0.35;
-      }
-      100% {
-        transform: scale(1.35);
-        opacity: 0;
-      }
-    }
-
-    /* Center Success Circle */
-    .success-badge {
+      top: 0;
+      left: -100%;
       width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      box-shadow: 
-        0 10px 30px rgba(16, 185, 129, 0.45),
-        0 0 25px rgba(139, 92, 246, 0.3),
-        inset 0 2px 4px rgba(255, 255, 255, 0.35);
-      display: grid;
-      place-items: center;
-      animation: badgePop 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #8b5cf6, #e31c25, #10b981, transparent);
+      animation: tyBeamScan 4s linear infinite;
+    }
+
+    @keyframes tyBeamScan {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    @keyframes tyCardEntrance {
+      0% { opacity: 0; transform: translateY(30px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* 3D Success Icon with Pulsing Waves & Orbit */
+    .ty-icon-stage {
       position: relative;
-      z-index: 2;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    @keyframes badgePop {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      60% {
-        transform: scale(1.18);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+    .ty-icon-ripple {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 2px solid rgba(16, 185, 129, 0.35);
+      animation: tyRipple 2.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
     }
 
-    .checkmark-svg {
-      width: 48%;
-      height: 48%;
-      display: block;
+    .ty-icon-ripple-2 {
+      animation-delay: 1.3s;
     }
 
-    .checkmark-path {
+    @keyframes tyRipple {
+      0% { transform: scale(0.85); opacity: 0.9; }
+      100% { transform: scale(1.55); opacity: 0; }
+    }
+
+    .ty-orbit-wrap {
+      position: absolute;
+      inset: -16px;
+      animation: tyOrbitSpin 10s linear infinite;
+      pointer-events: none;
+    }
+
+    .ty-orbit-star {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fbbf24;
+      font-size: 14px;
+      filter: drop-shadow(0 0 8px #fbbf24);
+    }
+
+    .ty-orbit-sparkle {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      color: #c084fc;
+      font-size: 12px;
+      filter: drop-shadow(0 0 8px #c084fc);
+    }
+
+    @keyframes tyOrbitSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .ty-icon-core {
+      position: relative;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #34d399 0%, #10b981 60%, #047857 100%);
+      box-shadow: 
+        0 0 35px rgba(16, 185, 129, 0.6),
+        0 10px 25px rgba(0, 0, 0, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .ty-icon-core:hover {
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    /* Animated SVG Checkmark Drawing */
+    .ty-check-svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    .ty-check-path {
       stroke: #ffffff;
       stroke-width: 4;
       stroke-linecap: round;
       stroke-linejoin: round;
-      stroke-dasharray: 48;
-      stroke-dashoffset: 48;
-      animation: drawCheck 0.7s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+      fill: none;
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: tyDrawCheck 1.2s 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;
     }
 
-    @keyframes drawCheck {
-      to {
-        stroke-dashoffset: 0;
-      }
+    @keyframes tyDrawCheck {
+      100% { stroke-dashoffset: 0; }
     }
 
-    /* Sparkles */
-    .sparkle {
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      pointer-events: none;
-      animation: sparkleTwinkle 3s ease-in-out infinite alternate;
+    /* Headings & Minimal Text */
+    .ty-title {
+      font-family: 'Outfit', 'Inter', sans-serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 30%, #f3e8ff 70%, #d8b4fe 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .sparkle-1 {
-      top: -6px;
-      right: -8px;
-      animation-delay: 0.3s;
+    .ty-title span.ty-highlight {
+      background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #6ee7b7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .sparkle-2 {
-      bottom: -4px;
-      left: -6px;
-      animation-delay: 1.2s;
+    .ty-subtitle {
+      font-size: clamp(15px, 2.2vw, 17px);
+      color: var(--ms-text-muted);
+      line-height: 1.5;
+      max-width: 580px;
+      margin: 0 auto 24px;
     }
 
-    @keyframes sparkleTwinkle {
-      0% {
-        transform: scale(0.6) rotate(0deg);
-        opacity: 0.3;
-      }
-      50% {
-        transform: scale(1.2) rotate(45deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(0.8) rotate(90deg);
-        opacity: 0.4;
-      }
-    }
-
-    /* ----------------------------------------------------
-       CONFIRMATION TITLE
-       ---------------------------------------------------- */
-    .elementor-heading-title {
-      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 700;
-      font-size: clamp(1.38rem, 4.3vw, 2.35rem);
-      line-height: 1.25;
-      letter-spacing: -0.025em;
-      color: #ffffff;
-      margin: 0 0 16px 0;
-      padding: 0;
-      text-align: center;
-      white-space: normal;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      animation: textReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
-    }
-
-    .elementor-size-default {
-      margin-block-start: 0;
-      margin-block-end: 16px;
-    }
-
-    @keyframes textReveal {
-      0% {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Subtitle & details */
-    .confirmation-desc {
-      font-size: clamp(0.95rem, 2.2vw, 1.1rem);
-      line-height: 1.6;
-      color: var(--text-muted);
-      max-width: 500px;
-      margin: 0 auto 28px auto;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      animation: textReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
-    }
-
-    .confirmation-desc strong {
+    .ty-subtitle strong {
       color: #ffffff;
       font-weight: 600;
     }
 
-    /* ----------------------------------------------------
-       NEXT STEPS / INFO PILLS
-       ---------------------------------------------------- */
-    .details-box {
-      background: rgba(14, 9, 24, 0.85);
-      border: 1px solid rgba(168, 122, 255, 0.2);
-      border-radius: 14px;
-      padding: clamp(14px, 3vw, 20px);
-      margin: 0 auto 30px auto;
-      width: 100%;
-      box-sizing: border-box;
-      display: grid;
-      gap: 12px;
-      text-align: left;
-      animation: textReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
-    }
-
-    .detail-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: clamp(0.85rem, 2vw, 0.95rem);
-      color: #ded8e8;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    .detail-icon {
-      width: 32px;
-      height: 32px;
-      flex-shrink: 0;
-      border-radius: 8px;
-      background: rgba(139, 92, 246, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      display: grid;
-      place-items: center;
-      color: var(--violet-light);
-    }
-
-    .detail-icon svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .detail-text {
-      flex: 1;
-      min-width: 0;
-      line-height: 1.35;
-    }
-
-    .detail-text b {
-      color: #ffffff;
-      font-weight: 600;
-      display: block;
-      font-size: clamp(0.88rem, 2vw, 0.96rem);
-    }
-
-    .detail-text span {
-      color: var(--text-muted);
-      font-size: clamp(0.78rem, 1.8vw, 0.85rem);
-    }
-
-    /* ----------------------------------------------------
-       ACTION BUTTONS
-       ---------------------------------------------------- */
-    .actions-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      animation: textReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
-    }
-
-    .btn-primary {
+    /* Slot Countdown Hold Banner */
+    .ty-timer-box {
       display: inline-flex;
       align-items: center;
+      gap: 10px;
+      background: rgba(227, 28, 37, 0.1);
+      border: 1px dashed rgba(227, 28, 37, 0.45);
+      border-radius: 50px;
+      padding: 7px 18px;
+      margin-bottom: 30px;
+      color: #fecaca;
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+
+    .ty-timer-box i {
+      color: var(--ms-red);
+      font-size: 15px;
+      animation: tyVibeIcon 1.5s infinite;
+    }
+
+    .ty-countdown-digits {
+      font-family: monospace;
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+      background: rgba(227, 28, 37, 0.3);
+      padding: 2px 7px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    @keyframes tyVibeIcon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2) rotate(8deg); }
+    }
+
+    /* 3-Step Process Cards (Clean & Sleek) */
+    .ty-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+
+    .ty-step-card {
+      position: relative;
+      background: rgba(26, 15, 46, 0.55);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      padding: 18px 16px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ty-step-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 16px rgba(139, 92, 246, 0.2);
+    }
+
+    .ty-step-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .ty-step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 9px;
-      width: 100%;
-      max-width: 340px;
-      padding: 14px 24px;
-      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      color: #e9d5ff;
+    }
+
+    .ty-step-badge {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .badge-yellow {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .badge-purple {
+      background: rgba(139, 92, 246, 0.18);
+      color: #c084fc;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+    }
+
+    .ty-step-title {
       font-size: 15px;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .ty-step-sub {
+      font-size: 12px;
+      color: var(--ms-text-muted);
+    }
+
+    /* Action Buttons Row */
+    .ty-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    /* Website Primary CTA Shake & Shine (Exact match from index.html) */
+    .ms-primary-cta {
+      background: linear-gradient(135deg, #7c3aed 0%, #e31c25 50%, #ff3340 100%) !important;
       color: #ffffff !important;
-      text-decoration: none;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
-      border: 1px solid rgba(199, 171, 255, 0.35);
-      box-shadow: 0 8px 24px rgba(109, 40, 217, 0.45);
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.02em !important;
+      padding: 13px 30px !important;
+      border-radius: 100px !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 0 25px rgba(227, 28, 37, 0.5), 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      will-change: transform;
+      animation: msBtnShake 3s ease-in-out infinite !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .ms-primary-cta::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.35);
+      transform: rotate(25deg);
+      pointer-events: none;
+      animation: msBtnShine 3s infinite;
+    }
+
+    .ms-primary-cta:hover {
+      animation-play-state: paused !important;
+      transform: translateY(-2px) scale(1.04) !important;
+      box-shadow: 0 0 35px rgba(227, 28, 37, 0.8), 0 0 20px rgba(168, 85, 247, 0.6) !important;
+      background: linear-gradient(135deg, #8b5cf6 0%, #e31c25 50%, #ff4d5a 100%) !important;
+      color: #ffffff !important;
+    }
+
+    /* Secondary WhatsApp CTA */
+    .ms-wa-cta {
+      background: rgba(37, 211, 102, 0.15) !important;
+      color: #a7f3d0 !important;
+      border: 1.5px solid rgba(37, 211, 102, 0.45) !important;
+      box-shadow: 0 0 18px rgba(37, 211, 102, 0.22) !important;
+      font-size: 14.5px !important;
+      font-weight: 700 !important;
+      padding: 12px 24px !important;
+      border-radius: 100px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 9px !important;
+      text-decoration: none !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .ms-wa-cta:hover {
+      background: #25d366 !important;
+      color: #070311 !important;
+      box-shadow: 0 0 28px rgba(37, 211, 102, 0.6) !important;
+      transform: translateY(-2px) scale(1.03) !important;
+    }
+
+    /* Confetti Replay Trigger */
+    .ms-confetti-btn {
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #e9d5ff;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 100px;
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
     }
 
-    .btn-primary:hover {
+    .ms-confetti-btn:hover {
+      background: rgba(139, 92, 246, 0.25);
+      border-color: #a78bfa;
       transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(139, 92, 246, 0.6);
-      border-color: rgba(220, 200, 255, 0.6);
     }
 
-    .btn-primary:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 14px rgba(109, 40, 217, 0.4);
+    /* Trust & Certified Badges */
+    .ty-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
     }
 
-    .btn-primary svg {
+    .ty-trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12.5px;
+      color: var(--ms-text-muted);
+      font-weight: 600;
+    }
+
+    .ty-partner-logos {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ty-partner-logos img {
+      height: 24px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0.95);
       transition: transform 0.2s ease;
     }
 
-    .btn-primary:hover svg {
-      transform: translateX(-3px);
+    .ty-partner-logos img:hover {
+      transform: scale(1.08);
     }
 
-    /* ----------------------------------------------------
-       FOOTER
-       ---------------------------------------------------- */
-    .page-footer {
+    /* Clean Minimalist Footer Strip */
+    .ty-clean-footer {
       position: relative;
       z-index: 10;
-      width: 100%;
-      padding: 18px 20px;
       text-align: center;
-      font-size: 12px;
-      color: #777085;
-      border-top: 1px solid rgba(139, 92, 246, 0.08);
-      background: rgba(9, 5, 16, 0.6);
+      padding: 24px 20px;
+      border-top: 1px solid rgba(139, 92, 246, 0.14);
+      background: rgba(7, 3, 17, 0.85);
+      font-size: 13px;
+      color: #8b80a8;
     }
 
-    .page-footer a {
-      color: var(--violet-light);
+    .ty-clean-footer a {
+      color: #b4a9cc;
       text-decoration: none;
+      margin: 0 10px;
       transition: color 0.2s ease;
     }
 
-    .page-footer a:hover {
+    .ty-clean-footer a:hover {
       color: #ffffff;
-      text-decoration: underline;
     }
 
-    /* ----------------------------------------------------
-       MOBILE ADJUSTMENTS
-       ---------------------------------------------------- */
-    @media (max-width: 480px) {
-      .header-inner {
-        justify-content: center;
-      }
-      
-      .header-badge {
-        display: none;
-      }
+    /* Keyframes for Website Button Shake & Shine */
+    @keyframes msBtnShake {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      2% { transform: rotate(-2.5deg) scale(1.02); }
+      4% { transform: rotate(2.5deg) scale(1.02); }
+      6% { transform: rotate(-2deg) scale(1.02); }
+      8% { transform: rotate(2deg) scale(1.02); }
+      10% { transform: rotate(0deg) scale(1); }
+      25% { transform: scale(1.03); }
+      30% { transform: scale(1); }
+    }
 
-      .confirmation-card {
-        padding: 28px 18px;
-        border-radius: 18px;
-      }
+    @keyframes msBtnShine {
+      0% { left: -60%; }
+      30% { left: 140%; }
+      100% { left: 140%; }
+    }
 
-      .elementor-heading-title {
-        font-size: clamp(1.25rem, 5.8vw, 1.65rem);
-        line-height: 1.28;
-        margin-bottom: 14px;
-      }
-
-      .confirmation-desc {
-        font-size: 0.92rem;
-        margin-bottom: 22px;
-      }
-
-      .details-box {
-        padding: 14px 12px;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .ty-steps-grid {
+        grid-template-columns: 1fr;
         gap: 10px;
-        margin-bottom: 24px;
       }
-
-      .detail-icon {
-        width: 28px;
-        height: 28px;
+      .ty-main-wrap {
+        padding: 24px 14px 40px;
       }
-
-      .btn-primary {
-        max-width: 100%;
-        padding: 13px 18px;
-        font-size: 14px;
+      .ty-card {
+        padding: 26px 16px;
+        border-radius: 20px;
       }
-    }
-
-    @media (min-width: 768px) and (max-width: 1200px) {
-      .elementor-heading-title {
-        font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+      .ty-actions-row {
+        flex-direction: column;
+        align-items: stretch;
       }
-    }
-
-    @media (min-width: 1200px) {
-      .elementor-heading-title {
-        font-size: 2.35rem;
+      .ms-primary-cta, .ms-wa-cta, .ms-confetti-btn {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Ambient background glow elements -->
-  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
-  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <!-- Canvas Confetti -->
+  <canvas id="confetti-canvas"></canvas>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <a class="brand" href="/" title="Marketing Safalta">
-        <img src="/assets/logo.webp" onerror="this.src='/assets/img/logo-marketing-safalta.png'" alt="Marketing Safalta Logo" width="40" height="40">
-        <div class="brand-text">
-          <span class="brand-title">Marketing Safalta</span>
-          <span class="brand-subtitle">Performance Marketing</span>
-        </div>
+  <!-- Ambient Glowing Background Mesh -->
+  <div class="ms-bg-mesh" aria-hidden="true">
+    <div class="ms-mesh-orb ms-mesh-orb-1"></div>
+    <div class="ms-mesh-orb ms-mesh-orb-2"></div>
+    <div class="ms-mesh-orb ms-mesh-orb-3"></div>
+  </div>
+
+  <!-- ===== MINIMAL CLEAN NAVBAR ===== -->
+  <nav class="ms-navbar" id="ms-navbar">
+    <div class="ms-nav-container">
+      <!-- Brand Logo -->
+      <a class="ms-brand" href="/">
+        <img src="/assets/img/logo-marketing-safalta.png" alt="Marketing Safalta">
       </a>
 
-      <div class="header-badge">
-        <span class="header-badge-dot"></span>
-        <span>Booking Verified</span>
+      <!-- Status Pill -->
+      <div class="ms-nav-status">
+        <span class="ms-status-dot"></span>
+        <span>Call Confirmed</span>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Main Section -->
-  <main class="page-main">
-    <article class="confirmation-card">
-      <div class="card-top-shine" aria-hidden="true"></div>
+  <!-- ===== MAIN CONTENT (TEXT-LIGHT & HIGH FOCUS) ===== -->
+  <main class="ty-main-wrap">
 
-      <!-- Animated Success Checkmark Badge -->
-      <div class="success-icon-wrapper">
-        <div class="pulse-ring" aria-hidden="true"></div>
-        <div class="pulse-ring-2" aria-hidden="true"></div>
-
-        <!-- Sparkles -->
-        <svg class="sparkle sparkle-1" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="#FCD03F" />
-        </svg>
-        <svg class="sparkle sparkle-2" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="#a78bfa" />
-        </svg>
-
-        <div class="success-badge">
-          <svg class="checkmark-svg" viewBox="0 0 24 24" fill="none">
-            <path class="checkmark-path" d="M5 13l4 4L19 7" />
+    <!-- Hero Glassmorphic Card -->
+    <section class="ty-card" id="ty-card">
+      
+      <!-- 3D Success Check Icon with Orbit and Waves -->
+      <div class="ty-icon-stage" id="celebrate-trigger" title="Click for celebratory confetti!">
+        <div class="ty-icon-ripple"></div>
+        <div class="ty-icon-ripple ty-icon-ripple-2"></div>
+        <div class="ty-orbit-wrap">
+          <i class="fas fa-star ty-orbit-star"></i>
+          <i class="fas fa-sparkles ty-orbit-sparkle"></i>
+        </div>
+        <div class="ty-icon-core">
+          <svg class="ty-check-svg" viewBox="0 0 52 52">
+            <path class="ty-check-path" d="M14 27 L22 35 L38 17"></path>
           </svg>
         </div>
       </div>
 
-      <!-- EXACT REQUESTED ELEMENTOR HEADING -->
-      <h2 class="elementor-heading-title elementor-size-default">Thank you. your meeting is confirmed</h2>
-
-      <!-- Description / Explanation -->
-      <p class="confirmation-desc">
-        We have reserved your slot. The <strong>Google Meet invite &amp; call link</strong> have been dispatched to your email address.
+      <!-- Main Headline -->
+      <h1 class="ty-title">
+        You're All Set! <span class="ty-highlight">Call Booked 🎉</span>
+      </h1>
+      
+      <!-- Minimal Punchy Subtitle -->
+      <p class="ty-subtitle">
+        We've received your details. Check your <strong>WhatsApp &amp; Email</strong> for the Google Meet calendar invite!
       </p>
 
-      <!-- Confirmation Details / Next Steps Box -->
-      <div class="details-box">
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
+      <!-- Compact Urgency Timer -->
+      <div class="ty-timer-box">
+        <i class="fas fa-stopwatch"></i>
+        <span>Slot Reserved:</span>
+        <span class="ty-countdown-digits" id="ty-countdown">14:59</span>
+      </div>
+
+      <!-- Sleek 3-Step Process (Minimal Text) -->
+      <div class="ty-steps-grid">
+        <!-- Step 1 -->
+        <div class="ty-step-card">
+          <div class="ty-step-top">
+            <span class="ty-step-num">01</span>
+            <span class="ty-step-badge badge-green"><i class="fas fa-check"></i> Sent</span>
           </div>
-          <div class="detail-text">
-            <b>Status: Slot Locked &amp; Confirmed</b>
-            <span>Your 1-on-1 strategy session is confirmed.</span>
-          </div>
+          <h2 class="ty-step-title">Invite Details</h2>
+          <p class="ty-step-sub">Sent to your WhatsApp &amp; Email</p>
         </div>
 
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
+        <!-- Step 2 -->
+        <div class="ty-step-card">
+          <div class="ty-step-top">
+            <span class="ty-step-num">02</span>
+            <span class="ty-step-badge badge-yellow"><i class="fas fa-bolt"></i> In Review</span>
           </div>
-          <div class="detail-text">
-            <b>Calendar Invitation Sent</b>
-            <span>Please check your inbox (and spam folder if not found).</span>
-          </div>
+          <h2 class="ty-step-title">Account Pre-Audit</h2>
+          <p class="ty-step-sub">Competitor &amp; keyword research</p>
         </div>
 
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
+        <!-- Step 3 -->
+        <div class="ty-step-card">
+          <div class="ty-step-top">
+            <span class="ty-step-num">03</span>
+            <span class="ty-step-badge badge-purple"><i class="fas fa-video"></i> Live</span>
           </div>
-          <div class="detail-text">
-            <b>1-on-1 Session with Growth Specialist</b>
-            <span>Customized high-ROI ad roadmap tailored for your business.</span>
-          </div>
+          <h2 class="ty-step-title">1-on-1 Strategy Call</h2>
+          <p class="ty-step-sub">30-min custom scaling plan</p>
         </div>
       </div>
 
-      <!-- Action Button -->
-      <div class="actions-wrap">
-        <a href="/" class="btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
-          <span>Return to Homepage</span>
+      <!-- Action Buttons Row -->
+      <div class="ty-actions-row">
+        <!-- Website Primary Shake CTA -->
+        <a href="/" class="ms-primary-cta">
+          <span>Return To Homepage</span>
+          <i class="fas fa-arrow-right"></i>
         </a>
       </div>
-    </article>
+
+      <!-- Trust & Certified Credentials -->
+      <div class="ty-trust-row">
+        <div class="ty-trust-pill">
+          <i class="fas fa-shield-alt" style="color: #10b981;"></i>
+          <span>100% Confidential</span>
+        </div>
+        <div class="ty-trust-pill">
+          <i class="fas fa-star" style="color: #fbbf24;"></i>
+          <span>5.0 Rating • 5000+ Campaigns</span>
+        </div>
+        <div class="ty-partner-logos">
+          <img src="/assets/img/google-ads-partner.png" alt="Google Ads Partner">
+          <img src="/assets/img/meta-partner.png" alt="Meta Business Partner">
+        </div>
+      </div>
+
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="page-footer">
-    <p>&copy; 2026 Marketing Safalta. All rights reserved.</p>
+  <!-- ===== MINIMAL CLEAN FOOTER (NO BIG CLUTTER) ===== -->
+  <footer class="ty-clean-footer">
+    <p>© 2025 MarketingSafalta.com • All Rights Reserved</p>
+    <div style="margin-top: 6px;">
+      <a href="/">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/about/">About</a>
+      <a href="/#contact">Contact</a>
+    </div>
   </footer>
+
+  <!-- ====================================================
+       INTERACTIVE ANIMATION & CELEBRATION ENGINE
+       ==================================================== -->
+  <script>
+    // 1. 15-Minute Countdown Timer
+    (function initTimer() {
+      var duration = 15 * 60; // 15 mins
+      var timerDisplay = document.getElementById('ty-countdown');
+      if (!timerDisplay) return;
+
+      var interval = setInterval(function () {
+        var minutes = Math.floor(duration / 60);
+        var seconds = duration % 60;
+        timerDisplay.textContent = 
+          (minutes < 10 ? '0' : '') + minutes + ':' + 
+          (seconds < 10 ? '0' : '') + seconds;
+
+        if (--duration < 0) {
+          clearInterval(interval);
+          timerDisplay.textContent = '00:00';
+        }
+      }, 1000);
+    })();
+
+    // 2. High Performance Canvas Confetti Particle System
+    var canvas = document.getElementById('confetti-canvas');
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    var animationId = null;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    var colors = ['#10b981', '#34d399', '#8b5cf6', '#a78bfa', '#e31c25', '#ff3340', '#fbbf24', '#ffffff'];
+
+    function createConfetti(x, y, count, angleMin, angleMax) {
+      for (var i = 0; i < count; i++) {
+        var angle = (Math.random() * (angleMax - angleMin) + angleMin) * (Math.PI / 180);
+        var speed = Math.random() * 12 + 6;
+        particles.push({
+          x: x,
+          y: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          size: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 12,
+          opacity: 1,
+          decay: Math.random() * 0.007 + 0.005,
+          shape: Math.random() > 0.4 ? 'rect' : 'circle'
+        });
+      }
+    }
+
+    function renderConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (var i = particles.length - 1; i >= 0; i--) {
+        var p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.22; // gravity
+        p.vx *= 0.99; // drag
+        p.rotation += p.rotationSpeed;
+        p.opacity -= p.decay;
+
+        if (p.opacity <= 0 || p.y > canvas.height + 50) {
+          particles.splice(i, 1);
+          continue;
+        }
+
+        ctx.save();
+        ctx.globalAlpha = Math.max(p.opacity, 0);
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+
+        if (p.shape === 'rect') {
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+        } else {
+          ctx.beginPath();
+          ctx.arc(0, 0, p.size / 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.restore();
+      }
+
+      if (particles.length > 0) {
+        animationId = requestAnimationFrame(renderConfetti);
+      } else {
+        animationId = null;
+      }
+    }
+
+    function fireCelebration() {
+      // Launch from left and right corners
+      createConfetti(canvas.width * 0.15, canvas.height * 0.85, 70, -80, -30);
+      createConfetti(canvas.width * 0.85, canvas.height * 0.85, 70, -150, -100);
+      // Center pop
+      createConfetti(canvas.width * 0.5, canvas.height * 0.5, 40, -140, -40);
+
+      if (!animationId) {
+        renderConfetti();
+      }
+    }
+
+    function fireConfettiBurst() {
+      createConfetti(canvas.width * 0.5, canvas.height * 0.4, 80, -180, 0);
+      if (!animationId) {
+        renderConfetti();
+      }
+    }
+
+    // Continuous Festive Confetti Loop
+    var burstToggle = 0;
+    function loopCelebration() {
+      if (burstToggle % 2 === 0) {
+        createConfetti(canvas.width * 0.12, canvas.height * 0.82, 45, -75, -25);
+        createConfetti(canvas.width * 0.88, canvas.height * 0.82, 45, -155, -105);
+      } else {
+        createConfetti(canvas.width * 0.5, canvas.height * 0.45, 55, -160, -20);
+      }
+      burstToggle++;
+
+      if (!animationId) {
+        renderConfetti();
+      }
+    }
+
+    // Trigger initial celebration on load and then loop
+    window.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function() {
+        fireCelebration();
+        // Loop celebration every 2.8 seconds
+        setInterval(loopCelebration, 2800);
+      }, 300);
+    });
+
+    // Also trigger extra burst when clicking the checkmark icon stage
+    var trigger = document.getElementById('celebrate-trigger');
+    if (trigger) {
+      trigger.addEventListener('click', fireCelebration);
+    }
+  </script>
 </body>
 
 </html>
