@@ -1084,7 +1084,7 @@ a {
    ===================================================== */
 .ms-faq-item {
   background: var(--ms-card-bg);
-  border: 1px solid rgba(227, 28, 37, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.25);
   border-radius: 14px;
   margin-bottom: 14px;
   padding: 22px 26px;
@@ -1094,9 +1094,9 @@ a {
 
 .ms-faq-item:hover,
 .ms-faq-item.active {
-  border-color: #e31c25;
-  box-shadow: 0 0 20px rgba(227, 28, 37, 0.2);
-  background: #fafafa;
+  border-color: var(--ms-purple-light);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
+  background: var(--ms-card-hover);
 }
 
 .ms-faq-question {
@@ -1111,12 +1111,13 @@ a {
 .ms-faq-icon {
   font-size: 22px;
   font-weight: 700;
-  color: var(--ms-red);
+  color: var(--ms-lime);
   transition: transform 0.25s ease;
 }
 
 .ms-faq-item.active .ms-faq-icon {
   transform: rotate(45deg);
+  color: var(--ms-lime);
 }
 
 .ms-faq-answer {
@@ -1126,7 +1127,7 @@ a {
   line-height: 1.75;
   margin-top: 14px;
   padding-top: 14px;
-  border-top: 1px solid rgba(227, 28, 37, 0.15);
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
 }
 
 .ms-faq-item.active .ms-faq-answer {
