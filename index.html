@@ -446,9 +446,46 @@
                 padding: 11px 20px !important;
                 font-size: 14.5px !important;
             }
-            .ms-float-btns {
-                display: none !important;
-            }
+        /* Prominent Floating Cut / Close Button on Video Player */
+        .ms-yt-modal-close {
+            position: absolute !important;
+            top: 14px !important;
+            right: 14px !important;
+            z-index: 99999 !important;
+            background: rgba(18, 9, 32, 0.88) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1.5px solid rgba(227, 28, 37, 0.7) !important;
+            box-shadow: 0 0 20px rgba(227, 28, 37, 0.5), 0 4px 15px rgba(0, 0, 0, 0.8) !important;
+            color: #ffffff !important;
+            font-size: 13.5px !important;
+            font-weight: 700 !important;
+            padding: 7px 16px !important;
+            border-radius: 50px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+            cursor: pointer !important;
+            transition: all 0.25s ease !important;
+            width: auto !important;
+            height: auto !important;
+        }
+
+        .ms-yt-modal-close:hover {
+            background: linear-gradient(135deg, #7c3aed, #e31c25) !important;
+            border-color: #ff3340 !important;
+            transform: scale(1.06) !important;
+            box-shadow: 0 0 30px rgba(227, 28, 37, 0.8) !important;
+        }
+
+        .ms-cut-icon {
+            font-size: 15px !important;
+            font-weight: 900 !important;
+            color: #ff4d5a !important;
+        }
+
+        .ms-yt-modal-close:hover .ms-cut-icon {
+            color: #ffffff !important;
         }
     </style>
 </head>
@@ -1417,10 +1454,10 @@
                 Watch quick growth tips, client case studies, and ad campaign secrets directly here. Tap any video below to play instantly without leaving the page.
             </p>
 
-            <!-- YouTube Shorts Grid -->
+            <!-- YouTube Shorts Grid (Playing Downloaded High-Res MP4s) -->
             <div class="ms-yt-shorts-grid">
                 <!-- Short 1: DSswJco0KVM -->
-                <div class="ms-yt-short-card" data-video-id="DSswJco0KVM">
+                <div class="ms-yt-short-card" data-video-id="DSswJco0KVM" data-video-src="assets/videos/DSswJco0KVM.mp4">
                     <img class="ms-yt-thumb" src="https://img.youtube.com/vi/DSswJco0KVM/hqdefault.jpg" alt="Marketing Safalta YouTube Short 1" loading="lazy">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
@@ -1442,7 +1479,7 @@
                 </div>
 
                 <!-- Short 2: 97dEkk1olt0 -->
-                <div class="ms-yt-short-card" data-video-id="97dEkk1olt0">
+                <div class="ms-yt-short-card" data-video-id="97dEkk1olt0" data-video-src="assets/videos/97dEkk1olt0.mp4">
                     <img class="ms-yt-thumb" src="https://img.youtube.com/vi/97dEkk1olt0/hqdefault.jpg" alt="Marketing Safalta YouTube Short 2" loading="lazy">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
@@ -1464,7 +1501,7 @@
                 </div>
 
                 <!-- Short 3: nPcqBAueR5s -->
-                <div class="ms-yt-short-card" data-video-id="nPcqBAueR5s">
+                <div class="ms-yt-short-card" data-video-id="nPcqBAueR5s" data-video-src="assets/videos/nPcqBAueR5s.mp4">
                     <img class="ms-yt-thumb" src="https://img.youtube.com/vi/nPcqBAueR5s/hqdefault.jpg" alt="Marketing Safalta YouTube Short 3" loading="lazy">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
@@ -1486,7 +1523,7 @@
                 </div>
 
                 <!-- Short 4: oR4vpRRIHBk -->
-                <div class="ms-yt-short-card" data-video-id="oR4vpRRIHBk">
+                <div class="ms-yt-short-card" data-video-id="oR4vpRRIHBk" data-video-src="assets/videos/oR4vpRRIHBk.mp4">
                     <img class="ms-yt-thumb" src="https://img.youtube.com/vi/oR4vpRRIHBk/hqdefault.jpg" alt="Marketing Safalta YouTube Short 4" loading="lazy">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
@@ -1508,7 +1545,7 @@
                 </div>
 
                 <!-- Short 5: xJwk0UAvxDw -->
-                <div class="ms-yt-short-card" data-video-id="xJwk0UAvxDw">
+                <div class="ms-yt-short-card" data-video-id="xJwk0UAvxDw" data-video-src="assets/videos/xJwk0UAvxDw.mp4">
                     <img class="ms-yt-thumb" src="https://img.youtube.com/vi/xJwk0UAvxDw/hqdefault.jpg" alt="Marketing Safalta YouTube Short 5" loading="lazy">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
@@ -1532,11 +1569,16 @@
         </div>
     </section>
 
-    <!-- Modal Video Player for YouTube Shorts (No redirect) -->
+    <!-- Modal Video Player for YouTube Shorts (Downloaded local video + Cut button) -->
     <div id="msYtModal" class="ms-yt-modal">
         <div class="ms-yt-modal-container">
-            <button id="msYtModalClose" class="ms-yt-modal-close" aria-label="Close video player">✕</button>
-            <iframe id="msYtIframe" class="ms-yt-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- Cut / Close Button (Prominent Floating Badge on Playing Video) -->
+            <button id="msYtModalClose" class="ms-yt-modal-close" aria-label="Cut video and close">
+                <span class="ms-cut-icon">✕</span>
+                <span class="ms-cut-label">Cut</span>
+            </button>
+            <video id="msVideoPlayer" class="ms-yt-video" playsinline controls autoplay style="display: none; width: 100%; height: 100%; object-fit: cover; background: #000000;"></video>
+            <iframe id="msYtIframe" class="ms-yt-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: none;"></iframe>
         </div>
     </div>
 

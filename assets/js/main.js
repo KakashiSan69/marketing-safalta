@@ -238,39 +238,67 @@
         runCounterAnimation();
     }
 
-    /* ===== YOUTUBE SHORTS MODAL PLAYER (NO REDIRECT) ===== */
+    /* ===== YOUTUBE SHORTS MODAL PLAYER (LOCAL MP4 + YOUTUBE FALLBACK) ===== */
     document.addEventListener('DOMContentLoaded', function() {
         var ytCards = document.querySelectorAll('.ms-yt-short-card');
         var modal = document.getElementById('msYtModal');
+        var videoPlayer = document.getElementById('msVideoPlayer');
         var iframe = document.getElementById('msYtIframe');
         var closeBtn = document.getElementById('msYtModalClose');
 
-        if (!modal || !iframe) return;
+        if (!modal) return;
 
-        function openYtModal(videoId) {
-            // Embed URL with autoplay and responsive player
-            iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+        function openYtModal(videoSrc, videoId) {
+            if (videoSrc && videoPlayer) {
+                videoPlayer.src = videoSrc;
+                videoPlayer.style.display = 'block';
+                if (iframe) {
+                    iframe.style.display = 'none';
+                    iframe.src = '';
+                }
+                videoPlayer.currentTime = 0;
+                videoPlayer.play().catch(function() {
+                    // Autoplay with sound might need user interaction; user already clicked card
+                });
+            } else if (videoId && iframe) {
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+                iframe.style.display = 'block';
+                if (videoPlayer) {
+                    videoPlayer.style.display = 'none';
+                    videoPlayer.pause();
+                    videoPlayer.src = '';
+                }
+            }
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
         }
 
         function closeYtModal() {
             modal.classList.remove('open');
-            iframe.src = '';
+            if (videoPlayer) {
+                videoPlayer.pause();
+                videoPlayer.currentTime = 0;
+                videoPlayer.src = '';
+                videoPlayer.style.display = 'none';
+            }
+            if (iframe) {
+                iframe.src = '';
+                iframe.style.display = 'none';
+            }
             document.body.style.overflow = '';
         }
 
         ytCards.forEach(function(card) {
             card.addEventListener('click', function() {
+                var src = this.getAttribute('data-video-src');
                 var vid = this.getAttribute('data-video-id');
-                if (vid) {
-                    openYtModal(vid);
-                }
+                openYtModal(src, vid);
             });
         });
 
         if (closeBtn) {
             closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
                 e.stopPropagation();
                 closeYtModal();
             });
