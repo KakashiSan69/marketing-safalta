@@ -660,4 +660,41 @@
   margin-bottom: 24px !important;
 }
 
+/* Founder image enlarged and flush to the bottom red divider line */
+.ms-hero {
+  padding-top: 30px !important;
+  padding-bottom: 0 !important;
+}
+
+.ms-hero-inner {
+  align-items: flex-end !important;
+}
+
+.ms-hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.founder-showcase {
+  margin-bottom: 0 !important;
+  align-items: center;
+  width: 100%;
+}
+
+.founder-image-wrapper {
+  max-width: 540px !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.founder-img {
+  max-height: 580px !important;
+  width: 100% !important;
+  display: block;
+  margin-bottom: 0 !important;
+}
+
+
 
