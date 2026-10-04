@@ -85,7 +85,7 @@
         echo '</ul>';
     }
     ?>
-    <a href="tel:+916388910079" class="ms-slide-cta-btn">Book Free Strategy Call — +91 63889 10079</a>
+    <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="ms-slide-cta-btn">Book Free Strategy Call →</a>
 </div>
 <div class="ms-backdrop" id="ms-backdrop"></div>
 

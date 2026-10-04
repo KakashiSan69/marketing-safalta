@@ -92,7 +92,7 @@
             <span class="ms-sticky-sub">Ready to grow your business???</span>
             <strong class="ms-sticky-main">Connect with us now</strong>
         </div>
-        <a href="tel:+916388910079" class="cta-primary sticky-btn ms-sticky-btn">
+        <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="cta-primary sticky-btn ms-sticky-btn">
             <span>Book A Free Strategy Call →</span>
         </a>
     </div>

@@ -94,7 +94,7 @@ get_header();
                 <h2>Stop Losing Money on Ads.<br>Start Growing Your Business Today.</h2>
                 <p>Book your FREE 30-minute strategy session with India's #1 Google Ads Expert.<br>Zero commitment. 100% value. Real strategies for your business.</p>
                 <div class="ms-cta-btns">
-                    <a href="tel:+916388910079" class="ms-btn-white">Book Free Strategy Call</a>
+                    <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="ms-btn-white">Book Free Strategy Call</a>
                     <a href="https://wa.me/916388910079" target="_blank" class="ms-btn-whatsapp-outline">
                         <i class="fab fa-whatsapp"></i> WhatsApp Us
                     </a>
