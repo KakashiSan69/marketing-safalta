@@ -10,7 +10,6 @@ get_header(); ?>
     <div class="ms-hero-inner">
         <!-- Left Content -->
         <div class="ms-hero-left">
-            <div class="ms-eyebrow">• GOOGLE ADS • SEO • PERFORMANCE MARKETING</div>
             <h1>Get More Leads,<br>Sales & Customers<br><span class="highlight">With Digital Marketing</span></h1>
             <p class="ms-hero-desc">We Help Businesses Grow Online With <strong>SEO, Google Ads, Meta Ads</strong>, <strong>Social Media Marketing</strong> & <strong>High-Converting Websites</strong>.</p>
 
@@ -24,7 +23,6 @@ get_header(); ?>
 
             <div class="ms-hero-btns">
                 <a href="tel:+916388910079" class="ms-btn-red">Book Your Free Strategy Call</a>
-                <a href="#about" class="ms-btn-outline">Know More</a>
             </div>
 
             <div class="ms-hero-trust">

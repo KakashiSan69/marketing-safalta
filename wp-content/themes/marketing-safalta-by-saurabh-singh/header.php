@@ -17,14 +17,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- ===== ANNOUNCEMENT BAR ===== -->
-<div class="ms-topbar" id="ms-topbar">
-    <div class="ms-container">
-        India's #1 Google Ads Expert | 5000+ Campaigns | 3X ROI Guaranteed &nbsp;
-        <a href="tel:+916388910079">Call Now: +91 63889 10079</a>
-    </div>
-</div>
-
 <!-- ===== NAVBAR ===== -->
 <nav class="ms-navbar" id="ms-navbar">
     <div class="ms-nav-container">
