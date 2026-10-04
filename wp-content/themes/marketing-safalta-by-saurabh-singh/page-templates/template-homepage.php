@@ -269,7 +269,7 @@ get_header(); ?>
         <div style="text-align:center; margin-bottom: 48px;">
             <div class="ms-section-tag">Client Reviews</div>
             <h2 class="ms-section-title">What Clients Say About<br><span class="red">Marketing Safalta</span></h2>
-            <p class="ms-section-desc" style="margin: 0 auto; text-align:center;">Join 5000+ businesses who trust Marketing Safalta to take their ad performance to the next level.</p>
+            <p class="ms-section-desc" style="margin: 0 auto; text-align:center;">Join 500+ businesses who trust Marketing Safalta to take their results to the next level.</p>
         </div>
 
         <div class="ms-testi-marquee-container">
