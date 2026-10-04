@@ -613,10 +613,10 @@ a {
    STATS BAR
    ===================================================== */
 .ms-stats-bar {
-  background: #0f0922;
-  border-top: 1px solid rgba(227, 28, 37, 0.2);
-  border-bottom: 1px solid #f0f0f0;
-  padding: 40px 0;
+  background: #0c061a;
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 45px 0;
 }
 
 .ms-stats-grid {
@@ -637,20 +637,27 @@ a {
 }
 
 .ms-stat-num {
-  font-size: 46px;
+  font-size: 52px;
   font-weight: 900;
-  background: linear-gradient(135deg, #ffffff 0%, #374151 40%, #ff3340 100%);
+  color: #ff6b00;
+  background: linear-gradient(135deg, #ffa033 0%, #ff6b00 50%, #ff3b00 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 6px;
+  filter: drop-shadow(0 0 16px rgba(255, 107, 0, 0.45));
+  margin-bottom: 8px;
   letter-spacing: -0.5px;
+  line-height: 1.1;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
 }
 
 .ms-stat-label {
-  font-size: 14px;
-  color: #6b7280;
+  font-size: 14.5px;
+  color: #cbd5e1;
   font-weight: 600;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 /* =====================================================
@@ -758,6 +765,7 @@ a {
 .ms-section-title .red {
   background: linear-gradient(135deg, #374151 0%, #ff3340 50%, #e31c25 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

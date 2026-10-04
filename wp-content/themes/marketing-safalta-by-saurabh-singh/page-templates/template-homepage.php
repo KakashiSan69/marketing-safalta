@@ -79,20 +79,20 @@ get_header(); ?>
 <!-- ===== STATS BAR ===== -->
 <section class="ms-stats-bar">
     <div class="ms-stats-grid">
-        <div>
-            <div class="ms-stat-num">300+</div>
+        <div class="ms-stat-box">
+            <div class="ms-stat-num" data-target="300" data-suffix="+" data-decimal="0">0+</div>
             <div class="ms-stat-label">Clients Served</div>
         </div>
-        <div>
-            <div class="ms-stat-num">45+</div>
+        <div class="ms-stat-box">
+            <div class="ms-stat-num" data-target="45" data-suffix="+" data-decimal="0">0+</div>
             <div class="ms-stat-label">Active Clients</div>
         </div>
-        <div>
-            <div class="ms-stat-num">5k+</div>
+        <div class="ms-stat-box">
+            <div class="ms-stat-num" data-target="5" data-suffix="k+" data-decimal="0">0k+</div>
             <div class="ms-stat-label">Leads Generated</div>
         </div>
-        <div>
-            <div class="ms-stat-num">99.9%</div>
+        <div class="ms-stat-box">
+            <div class="ms-stat-num" data-target="99.9" data-suffix="%" data-decimal="1">0.0%</div>
             <div class="ms-stat-label">Success Rate</div>
         </div>
     </div>
@@ -549,6 +549,57 @@ get_header(); ?>
         });
         if (!isActive) el.classList.add('active');
     }
+
+    // ===== STATS COUNTING ANIMATION =====
+    (function() {
+        function runCounterAnimation() {
+            var counters = document.querySelectorAll('.ms-stat-num[data-target]');
+            if (!counters.length) return;
+
+            var observer = new IntersectionObserver(function(entries, obs) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        var el = entry.target;
+                        var target = parseFloat(el.getAttribute('data-target'));
+                        var suffix = el.getAttribute('data-suffix') || '';
+                        var decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+                        var duration = 2000;
+                        var startTime = null;
+
+                        function step(timestamp) {
+                            if (!startTime) startTime = timestamp;
+                            var elapsed = timestamp - startTime;
+                            var progress = Math.min(elapsed / duration, 1);
+                            // Smooth easeOutCubic
+                            var ease = 1 - Math.pow(1 - progress, 3);
+                            var current = (target * ease).toFixed(decimals);
+
+                            el.textContent = current + suffix;
+
+                            if (progress < 1) {
+                                window.requestAnimationFrame(step);
+                            } else {
+                                el.textContent = (decimals > 0 ? target.toFixed(decimals) : target) + suffix;
+                            }
+                        }
+
+                        window.requestAnimationFrame(step);
+                        obs.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            counters.forEach(function(counter) {
+                observer.observe(counter);
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', runCounterAnimation);
+        } else {
+            runCounterAnimation();
+        }
+    })();
 </script>
 
 <?php get_footer(); ?>
