@@ -1612,7 +1612,7 @@
     </script>
 
     <!-- ===== FAQ SECTION (Moved to Bottom) ===== -->
-    <section class="ms-section" style="background: var(--ms-base);" id="faq">
+    <section class="ms-section" style="background: var(--ms-base); padding-bottom: 120px;" id="faq">
         <div class="ms-container">
             <div style="text-align:center; margin-bottom: 48px;">
                 <div class="ms-section-tag">FAQ</div>
@@ -1675,7 +1675,7 @@
                     <div class="ms-faq-answer">Yes. Ad spend goes directly to Google/Meta and the service fee is
                         separate. Everything is explained upfront.</div>
                 </div>
-                <div class="ms-faq-item" onclick="toggleFaq(this)">
+                <div class="ms-faq-item" onclick="toggleFaq(this)" style="margin-bottom: 24px;">
                     <div class="ms-faq-question">
                         <span>▼ 8. How do I book a strategy call?</span>
                         <span class="ms-faq-icon">+</span>
@@ -1683,6 +1683,8 @@
                     <div class="ms-faq-answer">Click any "Book A Free Strategy Call" button, fill the form and our team
                         will contact you.</div>
                 </div>
+                <!-- Extra clearance so FAQ 8 never gets hidden by the sticky bar -->
+                <div style="height: 100px;" aria-hidden="true"></div>
             </div>
         </div>
     </section>
