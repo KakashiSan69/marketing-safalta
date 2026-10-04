@@ -1,0 +1,17 @@
+{
+  "name": "anaam-tiwary-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/tw-built.css --minify",
+    "watch": "tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/tw-built.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

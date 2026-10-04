@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" fill="none" width="320" height="70">
+  <defs>
+    <linearGradient id="brandRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3340" />
+      <stop offset="100%" stop-color="#E31C25" />
+    </linearGradient>
+  </defs>
+
+  <!-- Red Emblem Badge -->
+  <g transform="translate(6, 6)">
+    <rect x="2" y="2" width="54" height="54" rx="14" fill="#0D0D0D" stroke="url(#brandRedGrad)" stroke-width="2.5"/>
+    <!-- Ascending Arrow Icon -->
+    <path d="M20 37L29 20L38 37" stroke="url(#brandRedGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M29 21V40" stroke="url(#brandRedGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Dynamic Accent Dot -->
+    <circle cx="29" cy="15" r="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(74, 18)">
+    <text x="0" y="20" font-family="'Inter', -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="0.5" fill="#0D0D0D">MARKETING</text>
+    <text x="142" y="20" font-family="'Inter', -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="0.5" fill="url(#brandRedGrad)">SAFALTA</text>
+    <text x="1" y="36" font-family="'Inter', -apple-system, sans-serif" font-weight="600" font-size="9" letter-spacing="2.5" fill="#6B7280">GOOGLE ADS &amp; ROI EXPERT</text>
+  </g>
+</svg>
