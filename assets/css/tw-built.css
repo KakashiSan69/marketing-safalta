@@ -611,3 +611,53 @@
   box-shadow: 0 0 20px rgba(255, 184, 0, 0.3);
 }
 
+/* =====================================================
+   COMPACT SPACING (50% REDUCED GAPS & PADDINGS)
+   ===================================================== */
+.ms-hero {
+  padding: 30px 0 45px !important;
+}
+
+.ms-stats-bar {
+  padding: 22px 0 !important;
+}
+
+.ms-partners-section {
+  padding: 25px 0 30px !important;
+}
+
+.ms-media-bar {
+  padding: 15px 0 !important;
+}
+
+.proof-section-wrap {
+  padding: 35px 0 30px !important;
+}
+
+.ms-section {
+  padding: 42px 0 !important;
+}
+
+.ms-cta-section {
+  padding: 45px 0 !important;
+}
+
+.ms-footer {
+  padding: 40px 0 20px !important;
+}
+
+.ms-cards-grid,
+.ms-partners-grid,
+.proof-cards-grid {
+  gap: 16px !important;
+}
+
+.proof-header {
+  margin-bottom: 20px !important;
+}
+
+.proof-filter-tabs {
+  margin-bottom: 24px !important;
+}
+
+
