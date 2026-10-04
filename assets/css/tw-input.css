@@ -1437,8 +1437,8 @@ a {
 }
 
 .ms-btn-white {
-  background: var(--ms-card-bg);
-  color: #110724 !important;
+  background: #ffffff !important;
+  color: #0b0517 !important;
   font-weight: 800;
   font-size: 15.5px;
   padding: 14px 30px;
@@ -1446,13 +1446,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .ms-btn-white:hover {
+  background: #f1f5f9 !important;
+  color: #000000 !important;
   transform: translateY(-2px);
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.7), 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .ms-btn-whatsapp-outline {
