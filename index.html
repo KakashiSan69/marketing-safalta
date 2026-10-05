@@ -547,7 +547,7 @@
                     <li id="menu-item-12" class="menu-item">
                         <a href="#why-choose-us">Services</a></li>
                     <li id="menu-item-15" class="menu-item">
-                        <a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener" style="color:#FF0000;"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <a href="#blog" style="color:#FF0000;"><i class="fab fa-youtube"></i> YouTube</a></li>
                 </ul> <a href="tel:+916388910079" class="ms-nav-cta ms-nav-desktop"><i class="fas fa-phone-alt"></i>
                     Contact</a>
             </div>
@@ -568,7 +568,7 @@
         <ul id="menu-primary-menu-1" class="ms-slide-nav">
             <li class="menu-item"><a href="#home">Home</a></li>
             <li class="menu-item"><a href="#why-choose-us">Services</a></li>
-            <li class="menu-item"><a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener" style="color:#FF0000;"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li class="menu-item"><a href="#blog" style="color:#FF0000;"><i class="fab fa-youtube"></i> YouTube</a></li>
         </ul> <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="ms-slide-cta-btn">Book Free Strategy Call →</a>
     </div>
     <div class="ms-backdrop" id="ms-backdrop"></div>
@@ -598,6 +598,21 @@
             if (hamburger) hamburger.addEventListener('click', openMenu);
             if (closeBtn) closeBtn.addEventListener('click', closeMenu);
             if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+            // Smooth scroll for ALL anchor nav links (desktop + mobile)
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    var targetId = this.getAttribute('href').slice(1);
+                    var targetEl = document.getElementById(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        closeMenu(); // close mobile menu if open
+                        var navHeight = navbar ? navbar.offsetHeight : 0;
+                        var top = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
+            });
 
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 10) {
@@ -764,9 +779,9 @@
                     </a>
                 </div>
                 <div class="ms-section-tag">Proven Results</div>
-                <h2 class="proof-hero-title" style="background: linear-gradient(135deg, #7c3aed, #e31c25 50%, #ff3340); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;">
+                <h2 class="proof-hero-title">
                     SEO &amp; Google Ads Results For<br>
-                    <span class="highlight" style="-webkit-text-fill-color: transparent;">Real Businesses &amp; Clients</span>
+                    <span class="highlight">Real Businesses &amp; Clients</span>
                 </h2>
             </div>
 
