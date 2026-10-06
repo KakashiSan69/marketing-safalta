@@ -316,5 +316,52 @@
             }
         });
     });
+
+    // 8. Dynamic Typewriter Effect for Hero Section
+    var typewriterEl = document.getElementById('hero-typewriter');
+    if (typewriterEl) {
+        var phrases = [
+            "Services in India",
+            "Guaranteed Results",
+            "500+ Client Portfolio",
+            "92%+ Client Retention Ratio",
+            "10 Cr+ Media Budget Handled"
+        ];
+        var phraseIndex = 0;
+        var charIndex = 0;
+        var isDeleting = false;
+        var typingSpeed = 85;
+        var deletingSpeed = 45;
+        var pauseEnd = 1800;
+        var pauseStart = 400;
+
+        function typeLoop() {
+            var currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                charIndex--;
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+            } else {
+                charIndex++;
+                typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+            }
+
+            var delta = isDeleting ? deletingSpeed : typingSpeed;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                delta = pauseEnd;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                delta = pauseStart;
+            }
+
+            setTimeout(typeLoop, delta);
+        }
+
+        // Start typing effect smoothly
+        setTimeout(typeLoop, 500);
+    }
 })();
 

@@ -10,8 +10,12 @@ get_header(); ?>
     <div class="ms-hero-inner">
         <!-- Left Content -->
         <div class="ms-hero-left">
-            <h1>Get More Leads,<br>Sales & Customers<br><span class="highlight">With Digital Marketing</span></h1>
-            <p class="ms-hero-desc">We Help Businesses Grow Online With <strong>SEO, Google Ads, Meta Ads</strong>, <strong>Social Media Marketing</strong> & <strong>High-Converting Websites</strong>.</p>
+            <h1 style="margin-bottom: 12px;"><span class="highlight">Digital Marketing</span></h1>
+            <div class="ms-hero-typewriter-wrap" style="margin: 0 0 28px; min-height: 60px; display: flex; align-items: center; flex-wrap: wrap;">
+                <span id="hero-typewriter" class="ms-typewriter-text" style="font-size: 46px; font-weight: 900; line-height: 1.15; color: #ffffff; text-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 0 2px 10px rgba(0, 0, 0, 0.6); letter-spacing: -0.8px;">Services in India</span>
+                <span class="ms-typewriter-cursor" style="display: inline-block; width: 4px; height: 46px; background-color: #ffffff; margin-left: 6px; vertical-align: middle; animation: blinkCursor 0.8s infinite; box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);"></span>
+            </div>
+            <p class="ms-hero-desc">We Help Businesses Grow Online With <strong>SEO, Google Ads, Meta Ads</strong>, <strong>Social Media Marketing</strong> &amp; <strong>High-Converting Websites</strong>.</p>
 
             <div class="ms-service-chips">
                 <span class="ms-chip red">Google Ads</span>
@@ -550,6 +554,52 @@ get_header(); ?>
             document.addEventListener('DOMContentLoaded', runCounterAnimation);
         } else {
             runCounterAnimation();
+        }
+
+        // Dynamic Typewriter Effect for Hero Section
+        var typewriterEl = document.getElementById('hero-typewriter');
+        if (typewriterEl) {
+            var phrases = [
+                "Services in India",
+                "Guaranteed Results",
+                "500+ Client Portfolio",
+                "92%+ Client Retention Ratio",
+                "10 Cr+ Media Budget Handled"
+            ];
+            var phraseIndex = 0;
+            var charIndex = 0;
+            var isDeleting = false;
+            var typingSpeed = 85;
+            var deletingSpeed = 45;
+            var pauseEnd = 1800;
+            var pauseStart = 400;
+
+            function typeLoop() {
+                var currentPhrase = phrases[phraseIndex];
+
+                if (isDeleting) {
+                    charIndex--;
+                    typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+                } else {
+                    charIndex++;
+                    typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+                }
+
+                var delta = isDeleting ? deletingSpeed : typingSpeed;
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    delta = pauseEnd;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    delta = pauseStart;
+                }
+
+                setTimeout(typeLoop, delta);
+            }
+
+            setTimeout(typeLoop, 500);
         }
     })();
 </script>

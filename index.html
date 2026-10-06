@@ -525,6 +525,26 @@
                 font-size: 15px !important;
             }
         }
+
+        /* Hero Dynamic Typewriter Animation */
+        @keyframes blinkCursor {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            .ms-hero-typewriter-wrap {
+                justify-content: center !important;
+                margin-top: 0 !important;
+                margin-bottom: 24px !important;
+                min-height: 48px !important;
+            }
+            #hero-typewriter {
+                font-size: 30px !important;
+            }
+            .ms-typewriter-cursor {
+                height: 30px !important;
+            }
+        }
     </style>
 </head>
 
@@ -630,9 +650,13 @@
         <div class="ms-hero-inner">
             <!-- Left Content -->
             <div class="ms-hero-left">
-                <h1>Get More Leads,<br>Sales & Customers<br><span class="highlight">With Digital Marketing</span></h1>
+                <h1 style="margin-bottom: 12px;"><span class="highlight">Digital Marketing</span></h1>
+                <div class="ms-hero-typewriter-wrap" style="margin: 0 0 28px; min-height: 60px; display: flex; align-items: center; flex-wrap: wrap;">
+                    <span id="hero-typewriter" class="ms-typewriter-text" style="font-size: 46px; font-weight: 900; line-height: 1.15; color: #ffffff; text-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 0 2px 10px rgba(0, 0, 0, 0.6); letter-spacing: -0.8px;">Services in India</span>
+                    <span class="ms-typewriter-cursor" style="display: inline-block; width: 4px; height: 46px; background-color: #ffffff; margin-left: 6px; vertical-align: middle; animation: blinkCursor 0.8s infinite; box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);"></span>
+                </div>
                 <p class="ms-hero-desc">We Help Businesses Grow Online With <strong>SEO, Google Ads, Meta Ads</strong>,
-                    <strong>Social Media Marketing</strong> & <strong>High-Converting Websites</strong>.</p>
+                    <strong>Social Media Marketing</strong> &amp; <strong>High-Converting Websites</strong>.</p>
 
                 <div class="ms-service-chips">
                     <span class="ms-chip red">Google Ads</span>
