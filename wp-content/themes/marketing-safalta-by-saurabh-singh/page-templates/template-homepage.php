@@ -216,7 +216,7 @@ get_header(); ?>
     <div class="ms-container" style="position: relative; z-index: 2;">
         <div style="text-align:center; margin-bottom: 56px;">
             <div class="ms-section-tag" style="background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px);">Our Services</div>
-            <h2 class="ms-section-title" style="color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.6);">Customized digital solutions<br>tailored to <span class="red" style="text-shadow: none;">every business's needs.</span></h2>
+            <h2 class="ms-section-title" style="color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.6);">All-in-One <span class="red" style="text-shadow: none;">Digital Marketing Services</span></h2>
         </div>
         <div class="ms-cards-grid">
             <div class="ms-service-card">
