@@ -123,7 +123,7 @@ get_header(); ?>
                 </div>
                 <h3>Certified Google Partner</h3>
                 <hr class="ms-partner-divider">
-                <p class="ms-partner-desc">Certified Google Ads Specialist for Healthcare Campaigns.</p>
+                <p class="ms-partner-desc">Certified Google Ads Specialist for Businesses Campaigns.</p>
             </div>
         </div>
     </div>
