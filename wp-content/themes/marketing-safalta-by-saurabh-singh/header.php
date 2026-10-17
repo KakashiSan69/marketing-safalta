@@ -29,6 +29,44 @@
         html { margin-top: 0 !important; }
         * html body { margin-top: 0 !important; }
         #wpadminbar { display: none !important; }
+
+        /* Hero Service Chips: Glowing Red White Box with Red Text (+40% Font) */
+        .ms-service-chips .ms-chip,
+        .ms-chip.red,
+        .ms-chip {
+            background: #ffffff !important;
+            color: #e31c25 !important;
+            border: 2px solid #ff3340 !important;
+            font-size: 19px !important;
+            font-weight: 800 !important;
+            padding: 9px 22px !important;
+            border-radius: 100px !important;
+            box-shadow: 0 0 20px rgba(255, 51, 64, 0.65), 0 0 35px rgba(227, 28, 37, 0.45) !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            letter-spacing: -0.2px;
+            transition: all 0.3s ease !important;
+        }
+
+        .ms-service-chips .ms-chip:hover,
+        .ms-chip.red:hover,
+        .ms-chip:hover {
+            background: #ffffff !important;
+            color: #b91018 !important;
+            border-color: #ff1e2d !important;
+            box-shadow: 0 0 30px rgba(255, 51, 64, 0.9), 0 0 50px rgba(227, 28, 37, 0.6) !important;
+            transform: translateY(-2px) scale(1.04) !important;
+        }
+
+        @media (max-width: 768px) {
+            .ms-service-chips .ms-chip,
+            .ms-chip.red,
+            .ms-chip {
+                font-size: 15px !important;
+                padding: 7px 16px !important;
+            }
+        }
     </style>
 </head>
 <body <?php body_class(); ?>>

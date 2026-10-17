@@ -429,28 +429,34 @@ a {
 }
 
 .ms-chip {
-  background: rgba(227, 28, 37, 0.1);
-  border: 1px solid rgba(227, 28, 37, 0.25);
-  color: var(--ms-ink);
-  font-size: 13.5px;
-  font-weight: 600;
-  padding: 7px 16px;
+  background: #ffffff;
+  border: 2px solid #ff3340;
+  color: #e31c25 !important;
+  font-size: 19px;
+  font-weight: 800;
+  padding: 9px 22px;
   border-radius: 100px;
-  transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(255, 51, 64, 0.65), 0 0 35px rgba(227, 28, 37, 0.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .ms-chip.red,
 .ms-chip.purple {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.25) 0%, rgba(227, 28, 37, 0.25) 100%);
-  color: #ffffff;
-  border: 1px solid rgba(227, 28, 37, 0.45);
-  box-shadow: 0 0 15px rgba(227, 28, 37, 0.2);
+  background: #ffffff;
+  color: #e31c25 !important;
+  border: 2px solid #ff3340;
+  box-shadow: 0 0 20px rgba(255, 51, 64, 0.65), 0 0 35px rgba(227, 28, 37, 0.45);
 }
 
 .ms-chip:hover {
-  border-color: #ff3340;
-  box-shadow: 0 0 15px rgba(227, 28, 37, 0.35);
-  transform: translateY(-1px);
+  background: #ffffff;
+  color: #b91018 !important;
+  border-color: #ff1e2d;
+  box-shadow: 0 0 30px rgba(255, 51, 64, 0.9), 0 0 50px rgba(227, 28, 37, 0.6);
+  transform: translateY(-2px) scale(1.04);
 }
 
 .ms-hero-btns {

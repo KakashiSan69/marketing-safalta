@@ -19,9 +19,9 @@ get_header(); ?>
 
             <div class="ms-service-chips">
                 <span class="ms-chip red">Google Ads</span>
-                <span class="ms-chip">SEO</span>
+                <span class="ms-chip red">SEO</span>
                 <span class="ms-chip red">Meta Ads</span>
-                <span class="ms-chip">Website Development</span>
+                <span class="ms-chip red">Website Development</span>
                 <span class="ms-chip red">Social Media Marketing</span>
             </div>
 
