@@ -25,9 +25,6 @@ get_header(); ?>
                 <span class="ms-chip red">Social Media Marketing</span>
             </div>
 
-            <div class="ms-hero-btns">
-                <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="ms-btn-red">Book Your Free Strategy Call</a>
-            </div>
 
             <div class="ms-hero-trust">
                 <div class="ms-trust-item">
