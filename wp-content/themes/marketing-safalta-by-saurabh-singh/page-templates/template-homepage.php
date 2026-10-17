@@ -17,6 +17,45 @@ get_header(); ?>
             </div>
             <p class="ms-hero-desc">We Help Businesses Grow Online With <strong>SEO, Google Ads, Meta Ads</strong>, <strong>Social Media Marketing</strong> &amp; <strong>High-Converting Websites</strong>.</p>
 
+            <!-- Hero Video Section (Tap to Play) -->
+            <div class="ms-hero-video-wrapper">
+                <div class="ms-hero-video-container" id="heroVideoContainer" onclick="playHeroVideo()">
+                    <div class="ms-hero-video-poster" id="heroVideoPoster">
+                        <img src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video-thumbnail.jpg" alt="Marketing Safalta - Digital Marketing Services" class="ms-hero-video-thumb" width="1024" height="576" loading="eager" fetchpriority="high">
+                        <button type="button" class="ms-hero-play-btn" aria-label="Play Video">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <video id="heroVideo" class="ms-hero-video-player" playsinline preload="metadata" controls>
+                        <source src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video.mp4" type="video/mp4">
+                        <source src="<?php echo esc_url(site_url()); ?>/assets/videos/hero-video.mp4" type="video/mp4">
+                        <source src="<?php echo esc_url(site_url()); ?>/assets/videos/video%2017.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <script>
+            function playHeroVideo() {
+                var poster = document.getElementById('heroVideoPoster');
+                var video = document.getElementById('heroVideo');
+                if (!video) return;
+                if (poster) {
+                    poster.classList.add('playing');
+                }
+                video.style.display = 'block';
+                video.controls = true;
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(function(err) {
+                        console.log("Hero video play error:", err);
+                    });
+                }
+            }
+            </script>
+
             <div class="ms-service-chips">
                 <span class="ms-chip red">Google Ads</span>
                 <span class="ms-chip red">SEO</span>
@@ -50,26 +89,6 @@ get_header(); ?>
                         </svg>
                     </span>
                     3X ROI
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Image -->
-        <div class="ms-hero-right">
-            <div class="ms-hero-img-wrap">
-                <img src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/2026/08/download.png" alt="Raj Thakur — Marketing Safalta Google Ads Expert" fetchpriority="high">
-
-                <!-- YouTube Badge -->
-                <div class="ms-float-badge yt">
-                    <div class="badge-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <div class="badge-label">Subscribe</div>
-                        <div class="badge-val">YouTube</div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Marketing Safalta — India's #1 Google Ads Expert. 12+ Years Experience. 5000+ Successful Campaigns. 3X ROI Guaranteed. Book Your Free Strategy Call Today.">
     <?php if ( is_front_page() || is_page_template( 'page-templates/template-homepage.php' ) ) : ?>
-        <link rel="preload" as="image" href="<?php echo esc_url(site_url()); ?>/wp-content/uploads/2026/08/download.png">
+        <link rel="preload" as="image" href="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video-thumbnail.jpg">
     <?php endif; ?>
     <?php wp_head(); ?>
     <!-- Meta Pixel Code -->
@@ -67,6 +67,204 @@
             .ms-chip {
                 font-size: 16px !important;
                 padding: 8px 18px !important;
+            }
+        }
+
+        /* Hero Single Column & Centered Layout */
+        .ms-hero-inner {
+            max-width: 960px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        .ms-hero-left {
+            width: 100% !important;
+            max-width: 860px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+        .ms-hero-left h1 {
+            text-align: center !important;
+            margin-bottom: 12px !important;
+            width: 100% !important;
+        }
+
+        .ms-hero-typewriter-wrap {
+            justify-content: center !important;
+            margin: 0 auto 24px !important;
+            width: 100% !important;
+        }
+
+        .ms-hero-desc {
+            margin: 0 auto 28px !important;
+            max-width: 760px !important;
+            text-align: center !important;
+        }
+
+        .ms-service-chips {
+            justify-content: center !important;
+            margin-bottom: 30px !important;
+        }
+
+        .ms-hero-trust {
+            justify-content: center !important;
+        }
+
+        /* Hero Video Box */
+        .ms-hero-video-wrapper {
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto 32px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .ms-hero-video-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #000000;
+            border: 2px solid rgba(168, 85, 247, 0.45);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(168, 85, 247, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .ms-hero-video-container:hover {
+            transform: translateY(-3px);
+            border-color: rgba(205, 228, 44, 0.7);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(205, 228, 44, 0.35);
+        }
+
+        .ms-hero-video-poster {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            background: #000000;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+
+        .ms-hero-video-poster.playing {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .ms-hero-video-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background-color: #05020a;
+        }
+
+        /* Glowing Play Button */
+        .ms-hero-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e31c25 0%, #7c3aed 100%);
+            border: 3px solid rgba(255, 255, 255, 0.95);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 35px rgba(227, 28, 37, 0.75);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 6;
+            outline: none;
+            padding: 0;
+        }
+
+        .ms-hero-play-btn::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            border: 2px solid rgba(227, 28, 37, 0.65);
+            animation: heroPulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes heroPulseRing {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.9;
+            }
+            50% {
+                transform: scale(1.35);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1.55);
+                opacity: 0;
+            }
+        }
+
+        .ms-hero-play-btn svg {
+            width: 34px;
+            height: 34px;
+            margin-left: 5px;
+            fill: #ffffff;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+            transition: transform 0.25s ease;
+        }
+
+        .ms-hero-video-container:hover .ms-hero-play-btn {
+            transform: translate(-50%, -50%) scale(1.12);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 50px rgba(205, 228, 44, 0.85);
+            border-color: #cde42c;
+        }
+
+        .ms-hero-video-player {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+            display: block;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .ms-hero-video-wrapper {
+                margin: 0 auto 24px;
+            }
+            .ms-hero-video-container {
+                border-radius: 14px;
+            }
+            .ms-hero-play-btn {
+                width: 60px;
+                height: 60px;
+            }
+            .ms-hero-play-btn svg {
+                width: 24px;
+                height: 24px;
+                margin-left: 4px;
             }
         }
     </style>
