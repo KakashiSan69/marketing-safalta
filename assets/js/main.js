@@ -1,4 +1,4 @@
-// Marketing Safalta Interactive Scripts
+// Marketing Safalta Interactive Scripts (Performance Optimized)
 (function() {
     'use strict';
 
@@ -27,41 +27,68 @@
 
     // Close menu when clicking slide nav links
     var slideLinks = document.querySelectorAll('.ms-slide-nav a');
-    slideLinks.forEach(function(link) {
-        link.addEventListener('click', closeMenu);
-    });
-
-    // 2. Navbar Scroll Effect
-    window.addEventListener('scroll', function() {
-        if (!navbar) return;
-        if (window.scrollY > 10) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // 3. Hide Sticky Bar Near Footer
-    var stickyBar = document.getElementById('ms-sticky-bar');
-    if (stickyBar) {
-        window.addEventListener('scroll', function() {
-            var scrollY = window.scrollY || window.pageYOffset;
-            var winH = window.innerHeight;
-            var docH = document.documentElement.scrollHeight;
-            if (scrollY + winH >= docH - 120) {
-                stickyBar.style.display = 'none';
-            } else {
-                stickyBar.style.display = 'block';
-            }
-        });
+    for (var i = 0; i < slideLinks.length; i++) {
+        slideLinks[i].addEventListener('click', closeMenu);
     }
+
+    // 2 & 3. Unified, rAF-Throttled Scroll Handler (Zero forced reflows)
+    var stickyBar = document.getElementById('ms-sticky-bar') || document.getElementById('sticky-bar');
+    var cachedDocH = document.documentElement.scrollHeight;
+    var cachedWinH = window.innerHeight;
+    var ticking = false;
+
+    window.addEventListener('resize', function() {
+        cachedDocH = document.documentElement.scrollHeight;
+        cachedWinH = window.innerHeight;
+    }, { passive: true });
+
+    function onScrollUpdate() {
+        var scrollY = window.scrollY || window.pageYOffset;
+
+        // Navbar scrolled state
+        if (navbar) {
+            if (scrollY > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        // Sticky bar visibility & footer hide
+        if (stickyBar) {
+            if (scrollY > 450) {
+                if (scrollY + cachedWinH >= cachedDocH - 120) {
+                    stickyBar.style.display = 'none';
+                    stickyBar.classList.remove('visible');
+                } else {
+                    stickyBar.style.display = 'block';
+                    stickyBar.classList.add('visible');
+                }
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        }
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(onScrollUpdate);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Initial check
+    onScrollUpdate();
 
     // 4. FAQ Accordion Toggle
     window.toggleFaq = function(el) {
         var isActive = el.classList.contains('active');
-        document.querySelectorAll('.ms-faq-item').forEach(function(item) {
-            item.classList.remove('active');
-        });
+        var allFaqs = document.querySelectorAll('.ms-faq-item');
+        for (var j = 0; j < allFaqs.length; j++) {
+            allFaqs[j].classList.remove('active');
+        }
         if (!isActive) el.classList.add('active');
     };
 
@@ -71,6 +98,7 @@
         if (!counters.length) return;
 
         var observer = new IntersectionObserver(function(entries, obs) {
+            var activeCount = counters.length;
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     var el = entry.target;
@@ -113,7 +141,6 @@
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             var name = (contactForm.querySelector('[name="your-name"]') || {}).value || '';
-            var email = (contactForm.querySelector('[name="your-email"]') || {}).value || '';
             var responseOutput = contactForm.querySelector('.wpcf7-response-output');
             
             if (responseOutput) {
@@ -132,12 +159,12 @@
 
     // 7. Live Proof Filter & Lightbox Viewer
     var proofFallbackImages = [
-        'assets/proofs/proof-01.png',
-        'assets/proofs/proof-02.png',
-        'assets/proofs/proof-03.png',
-        'assets/proofs/proof-04.png',
-        'assets/proofs/proof-05.jpg',
-        'assets/proofs/proof-06.jpg'
+        'assets/proofs/proof-01.webp',
+        'assets/proofs/proof-02.webp',
+        'assets/proofs/proof-03.webp',
+        'assets/proofs/proof-04.webp',
+        'assets/proofs/proof-05.webp',
+        'assets/proofs/proof-06.webp'
     ];
     var activeGallery = proofFallbackImages;
     var currentIdx = 0;
@@ -233,13 +260,13 @@
     });
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', runCounterAnimation);
+        document.addEventListener('DOMContentLoaded', runCounterAnimation, { passive: true });
     } else {
         runCounterAnimation();
     }
 
-    /* ===== YOUTUBE SHORTS MODAL PLAYER (LOCAL MP4 + YOUTUBE FALLBACK) ===== */
-    document.addEventListener('DOMContentLoaded', function() {
+    /* ===== YOUTUBE SHORTS MODAL PLAYER ===== */
+    function initShortsModal() {
         var ytCards = document.querySelectorAll('.ms-yt-short-card');
         var modal = document.getElementById('msYtModal');
         var videoPlayer = document.getElementById('msVideoPlayer');
@@ -257,9 +284,7 @@
                     iframe.src = '';
                 }
                 videoPlayer.currentTime = 0;
-                videoPlayer.play().catch(function() {
-                    // Autoplay with sound might need user interaction; user already clicked card
-                });
+                videoPlayer.play().catch(function() {});
             } else if (videoId && iframe) {
                 iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
                 iframe.style.display = 'block';
@@ -315,7 +340,13 @@
                 closeYtModal();
             }
         });
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initShortsModal, { passive: true });
+    } else {
+        initShortsModal();
+    }
 
     // 8. Dynamic Typewriter Effect for Hero Section
     var typewriterEl = document.getElementById('hero-typewriter');
@@ -360,8 +391,24 @@
             setTimeout(typeLoop, delta);
         }
 
-        // Start typing effect smoothly
         setTimeout(typeLoop, 500);
     }
-})();
 
+    // 9. Smooth Scroll for Internal Anchor Links with Navbar Offset
+    document.addEventListener('click', function(e) {
+        var target = e.target.closest('a[href^="#"]');
+        if (!target) return;
+        var hash = target.getAttribute('href');
+        if (!hash || hash === '#' || hash === '#!') return;
+        var targetEl = document.querySelector(hash);
+        if (targetEl) {
+            e.preventDefault();
+            var navH = navbar ? navbar.offsetHeight : 70;
+            var targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - navH;
+            window.scrollTo({
+                top: targetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+})();

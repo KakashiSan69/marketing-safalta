@@ -6,18 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Marketing Safalta — India's #1 Google Ads Expert. 12+ Years Experience. 5000+ Successful Campaigns. 3X ROI Guaranteed. Book Your Free Strategy Call Today.">
-    <link rel="preload" as="image" href="assets/uploads/download.png">
+    <link rel="preload" as="image" href="assets/img/hero-video-thumbnail.webp" type="image/webp" fetchpriority="high">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <title>Marketing Safalta</title>
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (Optimized Non-Blocking) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    n.queue=[];
+    function loadFb(){
+        if(t)return;t=b.createElement(e);t.async=!0;t.defer=!0;t.src=v;
+        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }
+    var loaded=false;
+    function triggerFb(){
+        if(loaded)return;loaded=true;loadFb();
+        window.removeEventListener('scroll',triggerFb);
+        window.removeEventListener('touchstart',triggerFb);
+        window.removeEventListener('mousemove',triggerFb);
+        window.removeEventListener('click',triggerFb);
+    }
+    window.addEventListener('scroll',triggerFb,{passive:true,once:true});
+    window.addEventListener('touchstart',triggerFb,{passive:true,once:true});
+    window.addEventListener('mousemove',triggerFb,{passive:true,once:true});
+    window.addEventListener('click',triggerFb,{passive:true,once:true});
+    if('requestIdleCallback' in window){
+        requestIdleCallback(function(){ setTimeout(triggerFb, 2500); });
+    } else {
+        setTimeout(triggerFb, 3500);
+    }
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '361282140185826');
     fbq('track', 'PageView');
     </script>
@@ -33,279 +56,16 @@
     <link rel="alternate" type="application/rss+xml" title="Marketing Safalta &raquo; Feed" href="./feed/" />
     <link rel="alternate" type="application/rss+xml" title="Marketing Safalta &raquo; Comments Feed"
         href="./comments/feed/" />
-    <style id="wp-img-auto-sizes-contain-inline-css">
-        img:is([sizes=auto i], [sizes^="auto," i]) {
-            contain-intrinsic-size: 3000px 1500px
-        }
-
-        /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
-    </style>
-    <style id="wp-block-library-inline-css">
-        :root {
-            --wp-block-synced-color: #7a00df;
-            --wp-block-synced-color--rgb: 122, 0, 223;
-            --wp-bound-block-color: var(--wp-block-synced-color);
-            --wp-editor-canvas-background: #ddd;
-            --wp-admin-theme-color: #007cba;
-            --wp-admin-theme-color--rgb: 0, 124, 186;
-            --wp-admin-theme-color-darker-10: #006ba1;
-            --wp-admin-theme-color-darker-10--rgb: 0, 107, 160.5;
-            --wp-admin-theme-color-darker-20: #005a87;
-            --wp-admin-theme-color-darker-20--rgb: 0, 90, 135;
-            --wp-admin-border-width-focus: 2px
-        }
-
-        @media (min-resolution:192dpi) {
-            :root {
-                --wp-admin-border-width-focus: 1.5px
-            }
-        }
-
-        .wp-element-button {
-            cursor: pointer
-        }
-
-        :root .has-very-light-gray-background-color {
-            background-color: #eee
-        }
-
-        :root .has-very-dark-gray-background-color {
-            background-color: #313131
-        }
-
-        :root .has-very-light-gray-color {
-            color: #eee
-        }
-
-        :root .has-very-dark-gray-color {
-            color: #313131
-        }
-
-        :root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background {
-            background: linear-gradient(135deg, #00d084, #0693e3)
-        }
-
-        :root .has-purple-crush-gradient-background {
-            background: linear-gradient(135deg, #34e2e4, #4721fb 50%, #ab1dfe)
-        }
-
-        :root .has-hazy-dawn-gradient-background {
-            background: linear-gradient(135deg, #faaca8, #dad0ec)
-        }
-
-        :root .has-subdued-olive-gradient-background {
-            background: linear-gradient(135deg, #fafae1, #67a671)
-        }
-
-        :root .has-atomic-cream-gradient-background {
-            background: linear-gradient(135deg, #fdd79a, #004a59)
-        }
-
-        :root .has-nightshade-gradient-background {
-            background: linear-gradient(135deg, #330968, #31cdcf)
-        }
-
-        :root .has-midnight-gradient-background {
-            background: linear-gradient(135deg, #020381, #2874fc)
-        }
-
-        :root {
-            --wp--preset--font-size--normal: 16px;
-            --wp--preset--font-size--huge: 42px
-        }
-
-        .has-regular-font-size {
-            font-size: 1em
-        }
-
-        .has-larger-font-size {
-            font-size: 2.625em
-        }
-
-        .has-normal-font-size {
-            font-size: var(--wp--preset--font-size--normal)
-        }
-
-        .has-huge-font-size {
-            font-size: var(--wp--preset--font-size--huge)
-        }
-
-        :root .has-text-align-center {
-            text-align: center
-        }
-
-        :root .has-text-align-left {
-            text-align: left
-        }
-
-        :root .has-text-align-right {
-            text-align: right
-        }
-
-        .has-fit-text {
-            white-space: nowrap !important
-        }
-
-        #end-resizable-editor-section {
-            display: none
-        }
-
-        .aligncenter {
-            clear: both
-        }
-
-        .items-justified-left {
-            justify-content: flex-start
-        }
-
-        .items-justified-center {
-            justify-content: center
-        }
-
-        .items-justified-right {
-            justify-content: flex-end
-        }
-
-        .items-justified-space-between {
-            justify-content: space-between
-        }
-
-        .screen-reader-text {
-            word-wrap: normal !important;
-            border: 0;
-            clip-path: inset(50%);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;
-            word-break: normal !important
-        }
-
-        .screen-reader-text:focus {
-            background-color: #ddd;
-            clip-path: none;
-            color: #444;
-            display: block;
-            font-size: 1em;
-            height: auto;
-            left: 5px;
-            line-height: normal;
-            padding: 15px 23px 14px;
-            text-decoration: none;
-            top: 5px;
-            width: auto;
-            z-index: 100000
-        }
-
-        html :where(.has-border-color) {
-            border-style: solid
-        }
-
-        html :where([style^=border-color], [style*=";border-color"], [style*="; border-color"]) {
-            border-style: solid
-        }
-
-        html :where([style^=border-top-color], [style*=";border-top-color"], [style*="; border-top-color"]) {
-            border-top-style: solid
-        }
-
-        html :where([style^=border-right-color], [style*=";border-right-color"], [style*="; border-right-color"]) {
-            border-right-style: solid
-        }
-
-        html :where([style^=border-bottom-color], [style*=";border-bottom-color"], [style*="; border-bottom-color"]) {
-            border-bottom-style: solid
-        }
-
-        html :where([style^=border-left-color], [style*=";border-left-color"], [style*="; border-left-color"]) {
-            border-left-style: solid
-        }
-
-        html :where([style^=border-width], [style*=";border-width"], [style*="; border-width"]) {
-            border-style: solid
-        }
-
-        html :where([style^=border-top-width], [style*=";border-top-width"], [style*="; border-top-width"]) {
-            border-top-style: solid
-        }
-
-        html :where([style^=border-right-width], [style*=";border-right-width"], [style*="; border-right-width"]) {
-            border-right-style: solid
-        }
-
-        html :where([style^=border-bottom-width], [style*=";border-bottom-width"], [style*="; border-bottom-width"]) {
-            border-bottom-style: solid
-        }
-
-        html :where([style^=border-left-width], [style*=";border-left-width"], [style*="; border-left-width"]) {
-            border-left-style: solid
-        }
-
-        html :where(img[class*=wp-image-]) {
-            height: auto;
-            max-width: 100%
-        }
-
-        :where(figure) {
-            margin: 0 0 1em
-        }
-
-        html :where(.is-position-sticky) {
-            --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height, 0px)
-        }
-
-        @media screen and (max-width:600px) {
-            html :where(.is-position-sticky) {
-                --wp-admin--admin-bar--position-offset: 0px
-            }
-        }
-
-        /*wp_block_styles_on_demand_placeholder:6ac23fd637ff1*/
-        /*# sourceURL=wp-block-library-inline-css */
-    </style>
-    <style id="classic-theme-styles-inline-css">
-        /*! This file is auto-generated */
-        .wp-block-button__link {
-            color: #fff;
-            background-color: #32373c;
-            border-radius: 9999px;
-            box-shadow: none;
-            text-decoration: none;
-            padding: calc(.667em + 2px) calc(1.333em + 2px);
-            font-size: 1.125em
-        }
-
-        .wp-block-file__button {
-            background: #32373c;
-            color: #fff;
-            text-decoration: none
-        }
-
-        /*# sourceURL=/wp-includes/css/classic-themes.min.css */
-    </style>
-    <style id="wp-block-styles-placeholder-inline-css">
-        :root {
-            --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer."
-        }
-
-        /*# sourceURL=wp-block-styles-placeholder-inline-css */
-    </style>
-    <style id="wp-global-styles-placeholder-inline-css">
-        :root {
-            --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer."
-        }
-
-        /*# sourceURL=wp-global-styles-placeholder-inline-css */
-    </style>
+    
 
     <link rel='stylesheet' id='ms-google-fonts-css'
-        href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&#038;display=swap'
-        media='all' />
+        href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'
+        media='print' onload="this.media='all'" />
+    <noscript><link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'></noscript>
     <link rel='stylesheet' id='fontawesome-css'
-        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?ver=6.5.0' media='all' />
-    <link rel='stylesheet' id='ms-tw-built-css' href='assets/css/tw-built.css?ver=1791124900' media='all' />
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?ver=6.5.0' media='print' onload="this.media='all'" />
+    <noscript><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?ver=6.5.0'></noscript>
+    <link rel='stylesheet' id='ms-tw-built-css' href='assets/css/tw-built.min.css' media='all' />
     <link rel="canonical" href="index.html" />
     <style>
         html {
@@ -320,6 +80,12 @@
             display: none !important;
         }
 
+        
+        /* Content-Visibility Optimization for Below-the-fold sections */
+        .ms-stats, .ms-why, .ms-services-showcase, .ms-video-proof, .ms-faq, .ms-reviews, .ms-audit-cta, .ms-footer {
+            content-visibility: auto;
+            contain-intrinsic-size: 800px;
+        }
         /* Sticky Bottom Bar (Exact from raj-web-4) */
         .sticky-bar, .ms-sticky-bar {
             position: fixed !important;
@@ -821,7 +587,7 @@
         <div class="ms-nav-container">
             <!-- Brand Logo -->
             <a class="ms-brand" href="index.html">
-                <img src="assets/img/logo-marketing-safalta.png" alt="Marketing Safalta — Google Ads Expert">
+                <img src="assets/img/logo-marketing-safalta.webp" alt="Marketing Safalta — Google Ads Expert" width="45" height="44" decoding="async">
             </a>
 
             <!-- Desktop Nav & CTA -->
@@ -848,7 +614,7 @@
     <div class="ms-slide-menu" id="ms-slide-menu">
         <button class="ms-slide-menu-close" id="ms-slide-close" aria-label="Close menu">&times;</button>
         <div class="ms-slide-menu-logo">
-            <img src="assets/img/logo-marketing-safalta.png" alt="Marketing Safalta">
+            <img src="assets/img/logo-marketing-safalta.webp" alt="Marketing Safalta" width="45" height="44" decoding="async">
         </div>
         <ul id="menu-primary-menu-1" class="ms-slide-nav">
             <li class="menu-item"><a href="#home">Home</a></li>
@@ -861,53 +627,7 @@
     <!-- Body Offset -->
     <div class="ms-body-offset"></div>
 
-    <script>
-        (function () {
-            var hamburger = document.getElementById('ms-hamburger');
-            var slideMenu = document.getElementById('ms-slide-menu');
-            var backdrop = document.getElementById('ms-backdrop');
-            var closeBtn = document.getElementById('ms-slide-close');
-            var navbar = document.getElementById('ms-navbar');
-
-            function openMenu() {
-                slideMenu.classList.add('open');
-                backdrop.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            }
-            function closeMenu() {
-                slideMenu.classList.remove('open');
-                backdrop.classList.remove('show');
-                document.body.style.overflow = '';
-            }
-
-            if (hamburger) hamburger.addEventListener('click', openMenu);
-            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-            if (backdrop) backdrop.addEventListener('click', closeMenu);
-
-            // Smooth scroll for ALL anchor nav links (desktop + mobile)
-            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    var targetId = this.getAttribute('href').slice(1);
-                    var targetEl = document.getElementById(targetId);
-                    if (targetEl) {
-                        e.preventDefault();
-                        closeMenu(); // close mobile menu if open
-                        var navHeight = navbar ? navbar.offsetHeight : 0;
-                        var top = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                        window.scrollTo({ top: top, behavior: 'smooth' });
-                    }
-                });
-            });
-
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 10) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-        })();
-    </script>
+    
 
     <!-- ===== HERO SECTION ===== -->
     <section class="ms-hero" id="home">
@@ -927,14 +647,14 @@
                 <div class="ms-hero-video-wrapper">
                     <div class="ms-hero-video-container" id="heroVideoContainer" onclick="playHeroVideo()">
                         <div class="ms-hero-video-poster" id="heroVideoPoster">
-                            <img src="assets/img/hero-video-thumbnail.jpg" alt="Marketing Safalta - Digital Marketing Services" class="ms-hero-video-thumb" width="1024" height="576" loading="eager" fetchpriority="high">
+                            <img src="assets/img/hero-video-thumbnail.webp" alt="Marketing Safalta - Digital Marketing Services" class="ms-hero-video-thumb" width="1024" height="576" loading="eager" fetchpriority="high" decoding="async">
                             <button type="button" class="ms-hero-play-btn" aria-label="Play Video">
                                 <svg viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
                                 </svg>
                             </button>
                         </div>
-                        <video id="heroVideo" class="ms-hero-video-player" playsinline preload="auto" controls>
+                        <video id="heroVideo" class="ms-hero-video-player" playsinline preload="none" controls>
                             <source src="assets/videos/hero-video.mp4" type="video/mp4">
                             <source src="assets/videos/video%2017.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -1053,7 +773,7 @@
             </div>
             <div style="width: 100%; max-width: 820px; margin: 0 auto; position: relative;">
                 <div style="display: block; position: relative; border-radius: 18px; overflow: hidden; border: 1.5px solid rgba(168, 85, 247, 0.4); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(168, 85, 247, 0.3); background: #000; width: 100%;">
-                    <img src="assets/uploads/youtube-channel-safalta.png"
+                    <img src="assets/uploads/youtube-channel-safalta.webp" width="1024" height="904" loading="lazy" decoding="async"
                         alt="Marketing Safalta by Raj Thakur - YouTube Channel"
                         style="width: 100%; height: auto; display: block; object-fit: contain;">
                 </div>
@@ -1068,7 +788,7 @@
                 <!-- Meta Certified Partner Card -->
                 <div class="ms-partner-card">
                     <div class="ms-partner-logo-wrap">
-                        <img src="assets/img/meta-partner.png" alt="Meta Certified Partner" loading="lazy">
+                        <img src="assets/img/meta-partner.webp" alt="Meta Certified Partner" width="214" height="241" loading="lazy" decoding="async">
                     </div>
                     <h3>Meta Certified Partner</h3>
                     <hr class="ms-partner-divider">
@@ -1078,7 +798,7 @@
                 <!-- Certified Google Partner Card -->
                 <div class="ms-partner-card">
                     <div class="ms-partner-logo-wrap">
-                        <img src="assets/img/google-ads-partner.png" alt="Google Ads Certified Partner" loading="lazy">
+                        <img src="assets/img/google-ads-partner.webp" alt="Google Ads Certified Partner" width="488" height="145" loading="lazy" decoding="async">
                     </div>
                     <h3>Certified Google Partner</h3>
                     <hr class="ms-partner-divider">
@@ -1116,7 +836,7 @@
                 <!-- Proof Card 01 -->
                 <div class="proof-item-card" data-category="google" onclick="openLightboxProof(0)">
                     <div class="proof-img-frame">
-                        <img src="assets/proofs/proof-01.png" alt="Google Ads Results Proof 01" loading="lazy">
+                        <img src="assets/proofs/proof-01.webp" alt="Google Ads Results Proof 01" width="883" height="289" loading="lazy" decoding="async">
                     </div>
                     <div class="proof-bottom-bar">
                         <div class="proof-badge-chip">01</div>
@@ -1133,7 +853,7 @@
                 <!-- Proof Card 02 -->
                 <div class="proof-item-card" data-category="google" onclick="openLightboxProof(1)">
                     <div class="proof-img-frame">
-                        <img src="assets/proofs/proof-02.png" alt="Google Ads Results Proof 02" loading="lazy">
+                        <img src="assets/proofs/proof-02.webp" alt="Google Ads Results Proof 02" width="888" height="271" loading="lazy" decoding="async">
                     </div>
                     <div class="proof-bottom-bar">
                         <div class="proof-badge-chip">02</div>
@@ -1150,7 +870,7 @@
                 <!-- Proof Card 03 -->
                 <div class="proof-item-card" data-category="google" onclick="openLightboxProof(2)">
                     <div class="proof-img-frame">
-                        <img src="assets/proofs/proof-03.png" alt="Google Ads Results Proof 03" loading="lazy">
+                        <img src="assets/proofs/proof-03.webp" alt="Google Ads Results Proof 03" width="882" height="295" loading="lazy" decoding="async">
                     </div>
                     <div class="proof-bottom-bar">
                         <div class="proof-badge-chip">03</div>
@@ -1167,7 +887,7 @@
                 <!-- Proof Card 04 -->
                 <div class="proof-item-card" data-category="google" onclick="openLightboxProof(3)">
                     <div class="proof-img-frame">
-                        <img src="assets/proofs/proof-04.png" alt="Google Ads Results Proof 04" loading="lazy">
+                        <img src="assets/proofs/proof-04.webp" alt="Google Ads Results Proof 04" width="886" height="310" loading="lazy" decoding="async">
                     </div>
                     <div class="proof-bottom-bar">
                         <div class="proof-badge-chip">04</div>
@@ -1184,7 +904,7 @@
                 <!-- Proof Card 05 -->
                 <div class="proof-item-card" data-category="local" onclick="openLightboxProof(4)">
                     <div class="proof-img-frame">
-                        <img src="assets/proofs/proof-05.jpg" alt="GMB Local SEO Proof 05" loading="lazy">
+                        <img src="assets/proofs/proof-05.webp" alt="GMB Local SEO Proof 05" width="927" height="464" loading="lazy" decoding="async">
                     </div>
                     <div class="proof-bottom-bar">
                         <div class="proof-badge-chip">05</div>
@@ -1201,7 +921,7 @@
                 <!-- Proof Card 06 -->
                 <div class="proof-item-card" data-category="local" onclick="openLightboxProof(5)">
                     <div class="proof-img-frame">
-                        <img src="assets/proofs/proof-06.jpg" alt="GMB Local SEO Proof 06" loading="lazy">
+                        <img src="assets/proofs/proof-06.webp" alt="GMB Local SEO Proof 06" width="924" height="468" loading="lazy" decoding="async">
                     </div>
                     <div class="proof-bottom-bar">
                         <div class="proof-badge-chip">06</div>
@@ -1765,7 +1485,7 @@
             <div class="ms-yt-shorts-grid">
                 <!-- Short 1: DSswJco0KVM -->
                 <div class="ms-yt-short-card" data-video-id="DSswJco0KVM" data-video-src="assets/videos/DSswJco0KVM.mp4">
-                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/DSswJco0KVM/hqdefault.jpg" alt="Marketing Safalta YouTube Short 1" loading="lazy">
+                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/DSswJco0KVM/hqdefault.jpg" alt="Marketing Safalta YouTube Short 1" width="480" height="360" loading="lazy" decoding="async">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
                         <div class="ms-yt-play-btn">
@@ -1787,7 +1507,7 @@
 
                 <!-- Short 2: 97dEkk1olt0 -->
                 <div class="ms-yt-short-card" data-video-id="97dEkk1olt0" data-video-src="assets/videos/97dEkk1olt0.mp4">
-                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/97dEkk1olt0/hqdefault.jpg" alt="Marketing Safalta YouTube Short 2" loading="lazy">
+                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/97dEkk1olt0/hqdefault.jpg" alt="Marketing Safalta YouTube Short 2" width="480" height="360" loading="lazy" decoding="async">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
                         <div class="ms-yt-play-btn">
@@ -1809,7 +1529,7 @@
 
                 <!-- Short 3: nPcqBAueR5s -->
                 <div class="ms-yt-short-card" data-video-id="nPcqBAueR5s" data-video-src="assets/videos/nPcqBAueR5s.mp4">
-                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/nPcqBAueR5s/hqdefault.jpg" alt="Marketing Safalta YouTube Short 3" loading="lazy">
+                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/nPcqBAueR5s/hqdefault.jpg" alt="Marketing Safalta YouTube Short 3" width="480" height="360" loading="lazy" decoding="async">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
                         <div class="ms-yt-play-btn">
@@ -1831,7 +1551,7 @@
 
                 <!-- Short 4: oR4vpRRIHBk -->
                 <div class="ms-yt-short-card" data-video-id="oR4vpRRIHBk" data-video-src="assets/videos/oR4vpRRIHBk.mp4">
-                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/oR4vpRRIHBk/hqdefault.jpg" alt="Marketing Safalta YouTube Short 4" loading="lazy">
+                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/oR4vpRRIHBk/hqdefault.jpg" alt="Marketing Safalta YouTube Short 4" width="480" height="360" loading="lazy" decoding="async">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
                         <div class="ms-yt-play-btn">
@@ -1853,7 +1573,7 @@
 
                 <!-- Short 5: xJwk0UAvxDw -->
                 <div class="ms-yt-short-card" data-video-id="xJwk0UAvxDw" data-video-src="assets/videos/xJwk0UAvxDw.mp4">
-                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/xJwk0UAvxDw/hqdefault.jpg" alt="Marketing Safalta YouTube Short 5" loading="lazy">
+                    <img class="ms-yt-thumb" src="https://img.youtube.com/vi/xJwk0UAvxDw/hqdefault.jpg" alt="Marketing Safalta YouTube Short 5" width="480" height="360" loading="lazy" decoding="async">
                     <div class="ms-yt-overlay">
                         <span class="ms-yt-tag"><i class="fab fa-youtube"></i> Short</span>
                         <div class="ms-yt-play-btn">
@@ -1899,66 +1619,7 @@
         </div>
     </section>
 
-    <script>
-        function toggleFaq(el) {
-            var isActive = el.classList.contains('active');
-            document.querySelectorAll('.ms-faq-item').forEach(function (item) {
-                item.classList.remove('active');
-            });
-            if (!isActive) el.classList.add('active');
-        }
-
-        // ===== STATS COUNTING ANIMATION =====
-        (function () {
-            function runCounterAnimation() {
-                var counters = document.querySelectorAll('.ms-stat-num[data-target]');
-                if (!counters.length) return;
-
-                var observer = new IntersectionObserver(function (entries, obs) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            var el = entry.target;
-                            var target = parseFloat(el.getAttribute('data-target'));
-                            var suffix = el.getAttribute('data-suffix') || '';
-                            var decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
-                            var duration = 2000;
-                            var startTime = null;
-
-                            function step(timestamp) {
-                                if (!startTime) startTime = timestamp;
-                                var elapsed = timestamp - startTime;
-                                var progress = Math.min(elapsed / duration, 1);
-                                // Smooth easeOutCubic
-                                var ease = 1 - Math.pow(1 - progress, 3);
-                                var current = (target * ease).toFixed(decimals);
-
-                                el.textContent = current + suffix;
-
-                                if (progress < 1) {
-                                    window.requestAnimationFrame(step);
-                                } else {
-                                    el.textContent = (decimals > 0 ? target.toFixed(decimals) : target) + suffix;
-                                }
-                            }
-
-                            window.requestAnimationFrame(step);
-                            obs.unobserve(el);
-                        }
-                    });
-                }, { threshold: 0.15 });
-
-                counters.forEach(function (counter) {
-                    observer.observe(counter);
-                });
-            }
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', runCounterAnimation);
-            } else {
-                runCounterAnimation();
-            }
-        })();
-    </script>
+    
 
     <!-- ===== FAQ SECTION (Moved to Bottom) ===== -->
     <section class="ms-section" style="background: var(--ms-base); padding-bottom: 120px;" id="faq">
@@ -2051,20 +1712,7 @@
         </div>
     </div>
 
-    <script>
-        // Sticky Bottom Bar on Scroll (Exact raj-web-4 behavior)
-        (function () {
-            var bar = document.getElementById('sticky-bar') || document.getElementById('ms-sticky-bar');
-            if (!bar) return;
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 450) {
-                    bar.classList.add('visible');
-                } else {
-                    bar.classList.remove('visible');
-                }
-            }, { passive: true });
-        })();
-    </script>
+    
 
     <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","assets/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/marketing-safalta-by-saurabh-singh/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
@@ -2075,7 +1723,7 @@
 
 
 
-    <script id="aos-js-js" src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js?ver=2.3.4"></script>
+    <script id="aos-js-js" defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js?ver=2.3.4"></script>
     <script id="aos-js-js-after">
         document.addEventListener("DOMContentLoaded", function () { if (typeof AOS !== "undefined") AOS.init({ once: true, duration: 600 }); });
         //# sourceURL=aos-js-js-after
@@ -2118,7 +1766,7 @@
         </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.min.js"></script>
 </body>
 
 </html>

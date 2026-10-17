@@ -98,21 +98,6 @@
     </div>
 </div>
 
-<script>
-    // Sticky Bottom Bar on Scroll (Exact raj-web-4 behavior)
-    (function () {
-        var bar = document.getElementById('sticky-bar') || document.getElementById('ms-sticky-bar');
-        if (!bar) return;
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 450) {
-                bar.classList.add('visible');
-            } else {
-                bar.classList.remove('visible');
-            }
-        }, { passive: true });
-    })();
-</script>
-
 <?php wp_footer(); ?>
 </body>
 

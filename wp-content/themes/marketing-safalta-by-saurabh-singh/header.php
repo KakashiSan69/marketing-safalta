@@ -5,19 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Marketing Safalta — India's #1 Google Ads Expert. 12+ Years Experience. 5000+ Successful Campaigns. 3X ROI Guaranteed. Book Your Free Strategy Call Today.">
     <?php if ( is_front_page() || is_page_template( 'page-templates/template-homepage.php' ) ) : ?>
-        <link rel="preload" as="image" href="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video-thumbnail.jpg">
+        <link rel="preload" as="image" href="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video-thumbnail.webp" type="image/webp" fetchpriority="high">
     <?php endif; ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <?php wp_head(); ?>
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (Optimized Non-Blocking) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    n.queue=[];
+    function loadFb(){
+        if(t)return;t=b.createElement(e);t.async=!0;t.defer=!0;t.src=v;
+        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }
+    var loaded=false;
+    function triggerFb(){
+        if(loaded)return;loaded=true;loadFb();
+        window.removeEventListener('scroll',triggerFb);
+        window.removeEventListener('touchstart',triggerFb);
+        window.removeEventListener('mousemove',triggerFb);
+        window.removeEventListener('click',triggerFb);
+    }
+    window.addEventListener('scroll',triggerFb,{passive:true,once:true});
+    window.addEventListener('touchstart',triggerFb,{passive:true,once:true});
+    window.addEventListener('mousemove',triggerFb,{passive:true,once:true});
+    window.addEventListener('click',triggerFb,{passive:true,once:true});
+    if('requestIdleCallback' in window){
+        requestIdleCallback(function(){ setTimeout(triggerFb, 2500); });
+    } else {
+        setTimeout(triggerFb, 3500);
+    }
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '361282140185826');
     fbq('track', 'PageView');
     </script>

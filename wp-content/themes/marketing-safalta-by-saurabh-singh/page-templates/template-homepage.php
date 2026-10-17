@@ -21,14 +21,14 @@ get_header(); ?>
             <div class="ms-hero-video-wrapper">
                 <div class="ms-hero-video-container" id="heroVideoContainer" onclick="playHeroVideo()">
                     <div class="ms-hero-video-poster" id="heroVideoPoster">
-                        <img src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video-thumbnail.jpg" alt="Marketing Safalta - Digital Marketing Services" class="ms-hero-video-thumb" width="1024" height="576" loading="eager" fetchpriority="high">
+                        <img src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video-thumbnail.webp" alt="Marketing Safalta - Digital Marketing Services" class="ms-hero-video-thumb" width="1024" height="576" loading="eager" fetchpriority="high" decoding="async">
                         <button type="button" class="ms-hero-play-btn" aria-label="Play Video">
                             <svg viewBox="0 0 24 24">
                                 <path d="M8 5v14l11-7z" />
                             </svg>
                         </button>
                     </div>
-                    <video id="heroVideo" class="ms-hero-video-player" playsinline preload="auto" controls>
+                    <video id="heroVideo" class="ms-hero-video-player" playsinline preload="none" controls>
                         <source src="<?php echo esc_url(site_url()); ?>/assets/videos/hero-video.mp4" type="video/mp4">
                         <source src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video.mp4" type="video/mp4">
                         <source src="<?php echo esc_url(site_url()); ?>/assets/videos/video%2017.mp4" type="video/mp4">

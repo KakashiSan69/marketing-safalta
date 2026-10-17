@@ -2,6 +2,10 @@
 <html lang="en" data-theme="dark">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Meeting Confirmed! 🎉 | Marketing Safalta</title>
@@ -9,23 +13,42 @@
     content="Thank you! Your Strategy Call is confirmed with Marketing Safalta. We look forward to scaling your business.">
   <link rel="icon" type="image/webp" href="/assets/logo.webp">
 
-  <!-- Meta Pixel Code -->
-  <script>
+  <!-- Meta Pixel Code (Optimized Non-Blocking) -->
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    n.queue=[];
+    function loadFb(){
+        if(t)return;t=b.createElement(e);t.async=!0;t.defer=!0;t.src=v;
+        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }
+    var loaded=false;
+    function triggerFb(){
+        if(loaded)return;loaded=true;loadFb();
+        window.removeEventListener('scroll',triggerFb);
+        window.removeEventListener('touchstart',triggerFb);
+        window.removeEventListener('mousemove',triggerFb);
+        window.removeEventListener('click',triggerFb);
+    }
+    window.addEventListener('scroll',triggerFb,{passive:true,once:true});
+    window.addEventListener('touchstart',triggerFb,{passive:true,once:true});
+    window.addEventListener('mousemove',triggerFb,{passive:true,once:true});
+    window.addEventListener('click',triggerFb,{passive:true,once:true});
+    if('requestIdleCallback' in window){
+        requestIdleCallback(function(){ setTimeout(triggerFb, 2500); });
+    } else {
+        setTimeout(triggerFb, 3500);
+    }
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '361282140185826');
     fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=361282140185826&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
   <!-- Fonts & Icons matching the Website -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +59,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?ver=6.5.0">
   
   <!-- Website Built CSS -->
-  <link rel="stylesheet" href="/assets/css/tw-built.css?ver=1791124900">
+  <link rel="stylesheet" href="/assets/css/tw-built.min.css">
 
   <style>
     /* ====================================================
@@ -724,7 +747,7 @@
     <div class="ms-nav-container">
       <!-- Brand Logo -->
       <a class="ms-brand" href="/">
-        <img src="/assets/img/logo-marketing-safalta.png" alt="Marketing Safalta">
+        <img src="/assets/img/logo-marketing-safalta.webp" alt="Marketing Safalta">
       </a>
 
       <!-- Status Pill -->

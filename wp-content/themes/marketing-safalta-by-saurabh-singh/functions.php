@@ -43,14 +43,36 @@ function anaam_tiwary_theme_scripts() {
     // === Font Awesome (icons used throughout) ===
     wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', array(), '6.5.0' );
 
-    // === Tailwind Built CSS (compiled locally — single source of truth) ===
-    wp_enqueue_style( 'ms-tw-built', $theme_uri . '/assets/css/tw-built.css', array(), filemtime( get_template_directory() . '/assets/css/tw-built.css' ) );
+    // === Tailwind Built CSS (compiled locally — minified production) ===
+    $css_file = file_exists( get_template_directory() . '/assets/css/tw-built.min.css' ) ? '/assets/css/tw-built.min.css' : '/assets/css/tw-built.css';
+    wp_enqueue_style( 'ms-tw-built', $theme_uri . $css_file, array(), filemtime( get_template_directory() . $css_file ) );
+
+    // === Main Interactive Scripts (Minified, Throttled) ===
+    if ( file_exists( get_template_directory() . '/assets/js/main.min.js' ) ) {
+        wp_enqueue_script( 'ms-main', $theme_uri . '/assets/js/main.min.js', array(), filemtime( get_template_directory() . '/assets/js/main.min.js' ), true );
+    }
 
     // === AOS Animation Library ===
     wp_enqueue_script( 'aos-js', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', array(), '2.3.4', true );
     wp_add_inline_script( 'aos-js', 'document.addEventListener("DOMContentLoaded", function(){ if(typeof AOS !== "undefined") AOS.init({once:true, duration:600}); });' );
 }
 add_action( 'wp_enqueue_scripts', 'anaam_tiwary_theme_scripts' );
+
+// Add defer to scripts for non-blocking execution
+add_filter( 'script_loader_tag', function( $tag, $handle ) {
+    if ( in_array( $handle, array( 'aos-js', 'ms-main' ) ) ) {
+        return str_replace( ' src', ' defer src', $tag );
+    }
+    return $tag;
+}, 10, 2 );
+
+// Non-blocking print-swap for Google Fonts and FontAwesome
+add_filter( 'style_loader_tag', function( $tag, $handle ) {
+    if ( in_array( $handle, array( 'ms-google-fonts', 'fontawesome' ) ) ) {
+        return str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $tag );
+    }
+    return $tag;
+}, 10, 2 );
 
 /**
  * Breadcrumb Function
