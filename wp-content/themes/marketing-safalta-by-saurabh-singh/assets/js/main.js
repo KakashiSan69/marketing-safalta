@@ -355,8 +355,8 @@
             "Services in India",
             "Guaranteed Results",
             "500+ Client Portfolio",
-            "92%+ Client Retention Ratio",
-            "10 Cr+ Media Budget Handled"
+            "92%+ Retention Ratio",
+            "10 Cr+ Budget Handled"
         ];
         var phraseIndex = 0;
         var charIndex = 0;
