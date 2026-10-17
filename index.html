@@ -12,35 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <title>Marketing Safalta</title>
-    <!-- Meta Pixel Code (Optimized Non-Blocking) -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];
-    function loadFb(){
-        if(t)return;t=b.createElement(e);t.async=!0;t.defer=!0;t.src=v;
-        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
-    }
-    var loaded=false;
-    function triggerFb(){
-        if(loaded)return;loaded=true;loadFb();
-        window.removeEventListener('scroll',triggerFb);
-        window.removeEventListener('touchstart',triggerFb);
-        window.removeEventListener('mousemove',triggerFb);
-        window.removeEventListener('click',triggerFb);
-    }
-    window.addEventListener('scroll',triggerFb,{passive:true,once:true});
-    window.addEventListener('touchstart',triggerFb,{passive:true,once:true});
-    window.addEventListener('mousemove',triggerFb,{passive:true,once:true});
-    window.addEventListener('click',triggerFb,{passive:true,once:true});
-    if('requestIdleCallback' in window){
-        requestIdleCallback(function(){ setTimeout(triggerFb, 2500); });
-    } else {
-        setTimeout(triggerFb, 3500);
-    }
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '361282140185826');
     fbq('track', 'PageView');
     </script>
