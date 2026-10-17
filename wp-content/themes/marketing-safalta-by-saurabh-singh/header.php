@@ -239,6 +239,23 @@
             border-color: #cde42c;
         }
 
+        .ms-hero-play-btn.loading {
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            border-top-color: #cde42c !important;
+            animation: heroBtnSpin 0.7s linear infinite !important;
+        }
+        .ms-hero-play-btn.loading::before {
+            display: none;
+        }
+        .ms-hero-play-btn.loading svg {
+            opacity: 0.3;
+        }
+        @keyframes heroBtnSpin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
         .ms-hero-video-player {
             position: absolute;
             inset: 0;

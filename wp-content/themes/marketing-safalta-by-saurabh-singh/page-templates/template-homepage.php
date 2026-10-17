@@ -28,9 +28,9 @@ get_header(); ?>
                             </svg>
                         </button>
                     </div>
-                    <video id="heroVideo" class="ms-hero-video-player" playsinline preload="metadata" controls>
-                        <source src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video.mp4" type="video/mp4">
+                    <video id="heroVideo" class="ms-hero-video-player" playsinline preload="auto" controls>
                         <source src="<?php echo esc_url(site_url()); ?>/assets/videos/hero-video.mp4" type="video/mp4">
+                        <source src="<?php echo esc_url(site_url()); ?>/wp-content/uploads/hero-media/hero-video.mp4" type="video/mp4">
                         <source src="<?php echo esc_url(site_url()); ?>/assets/videos/video%2017.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -41,16 +41,33 @@ get_header(); ?>
             function playHeroVideo() {
                 var poster = document.getElementById('heroVideoPoster');
                 var video = document.getElementById('heroVideo');
+                var playBtn = document.querySelector('.ms-hero-play-btn');
                 if (!video) return;
-                if (poster) {
-                    poster.classList.add('playing');
+
+                if (playBtn) {
+                    playBtn.classList.add('loading');
                 }
                 video.style.display = 'block';
                 video.controls = true;
+
+                var hasStarted = false;
+                function hidePoster() {
+                    if (!hasStarted && poster) {
+                        hasStarted = true;
+                        poster.classList.add('playing');
+                    }
+                }
+
+                video.addEventListener('playing', hidePoster, { once: true });
+                video.addEventListener('timeupdate', hidePoster, { once: true });
+                video.addEventListener('canplaythrough', hidePoster, { once: true });
+                setTimeout(hidePoster, 500);
+
                 var playPromise = video.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(function(err) {
                         console.log("Hero video play error:", err);
+                        hidePoster();
                     });
                 }
             }

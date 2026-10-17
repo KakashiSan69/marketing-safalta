@@ -755,6 +755,23 @@
             border-color: #cde42c;
         }
 
+        .ms-hero-play-btn.loading {
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0.3) !important;
+            border-top-color: #cde42c !important;
+            animation: heroBtnSpin 0.7s linear infinite !important;
+        }
+        .ms-hero-play-btn.loading::before {
+            display: none;
+        }
+        .ms-hero-play-btn.loading svg {
+            opacity: 0.3;
+        }
+        @keyframes heroBtnSpin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
         .ms-hero-video-player {
             position: absolute;
             inset: 0;
@@ -907,7 +924,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <video id="heroVideo" class="ms-hero-video-player" playsinline preload="metadata" controls>
+                        <video id="heroVideo" class="ms-hero-video-player" playsinline preload="auto" controls>
                             <source src="assets/videos/hero-video.mp4" type="video/mp4">
                             <source src="assets/videos/video%2017.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -919,16 +936,33 @@
                 function playHeroVideo() {
                     var poster = document.getElementById('heroVideoPoster');
                     var video = document.getElementById('heroVideo');
+                    var playBtn = document.querySelector('.ms-hero-play-btn');
                     if (!video) return;
-                    if (poster) {
-                        poster.classList.add('playing');
+
+                    if (playBtn) {
+                        playBtn.classList.add('loading');
                     }
                     video.style.display = 'block';
                     video.controls = true;
+
+                    var hasStarted = false;
+                    function hidePoster() {
+                        if (!hasStarted && poster) {
+                            hasStarted = true;
+                            poster.classList.add('playing');
+                        }
+                    }
+
+                    video.addEventListener('playing', hidePoster, { once: true });
+                    video.addEventListener('timeupdate', hidePoster, { once: true });
+                    video.addEventListener('canplaythrough', hidePoster, { once: true });
+                    setTimeout(hidePoster, 500);
+
                     var playPromise = video.play();
                     if (playPromise !== undefined) {
                         playPromise.catch(function(err) {
                             console.log("Hero video play error:", err);
+                            hidePoster();
                         });
                     }
                 }
