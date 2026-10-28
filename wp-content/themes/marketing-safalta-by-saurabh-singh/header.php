@@ -370,7 +370,7 @@
         echo '</ul>';
     }
     ?>
-    <a href="https://app.automatefunnels.in/form/digital-marketing-services-mutw7l1u" class="ms-slide-cta-btn">Book Free Strategy Call →</a>
+    <a href="https://calendar.marketingsafalta.com/v3/free-digital-marketing-strategy-call/consultation" class="ms-slide-cta-btn">Book Free Strategy Call →</a>
 </div>
 <div class="ms-backdrop" id="ms-backdrop"></div>
 
